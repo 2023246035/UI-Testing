@@ -2,12 +2,12 @@ import {
   HttpClient
 } from "./chunk-55VUH47M.js";
 import {
-  CommonModule
-} from "./chunk-3PIUJSML.js";
-import {
   TranslateModule,
   TranslatePipe
 } from "./chunk-JZDDGXGG.js";
+import {
+  CommonModule
+} from "./chunk-3PIUJSML.js";
 import {
   BehaviorSubject,
   ChangeDetectorRef,
@@ -512,4 +512,4 @@ export {
   ToastService,
   FNToast
 };
-//# sourceMappingURL=chunk-GPRICQG7.js.map
+//# sourceMappingURL=chunk-6CMUMVOI.js.map

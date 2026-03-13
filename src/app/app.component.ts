@@ -42,7 +42,7 @@ import { FNFieldMessage } from "fn-field-message";
 export class AppComponent {
   title = "Component Showcase";
   form: FormGroup;
-  private fb = inject(FormBuilder);
+  private readonly fb = inject(FormBuilder);
   public toastService = inject(ToastService);
 
   // --- FN-LABEL VARIETIES ---
@@ -94,6 +94,35 @@ export class AppComponent {
     name: "textFloatOver",
     label: "Float Label: Over",
     floatLabelVariant: "over",
+  };
+
+  // 1.1 New 0.0.18 Features
+  addressInput: FNInputBase = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "address",
+    label: "Address (Alphanumeric + Symbols)",
+    isAlphanumeric: true,
+    isAddressLine: true,
+    placeholder: "Allows ( ) / , and alphanumeric",
+  };
+
+  statusSuccessInput: FNInputBase = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "statusSuccess",
+    label: "Success Status Label",
+    statusLabel: "Success",
+    value: "Positive State",
+  };
+
+  statusWarningInput: FNInputBase = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "statusWarning",
+    label: "Warning Status Label",
+    statusLabel: "Warning",
+    value: "Check this field",
   };
 
   // 2. Password Inputs
@@ -188,6 +217,9 @@ export class AppComponent {
       textIcons: [""],
       textFloatIn: [""],
       textFloatOver: [""],
+      address: [""],
+      statusSuccess: [""],
+      statusWarning: [""],
       passwordSecure: [""],
       passwordGenerate: [""],
       numberSpinners: [5],

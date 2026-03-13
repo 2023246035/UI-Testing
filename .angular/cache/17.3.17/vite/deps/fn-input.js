@@ -1,4 +1,12 @@
 import {
+  FNIconComponent,
+  FNToast,
+  ToastService
+} from "./chunk-6CMUMVOI.js";
+import {
+  FNFieldMessage
+} from "./chunk-RNMJJGDO.js";
+import {
   DefaultValueAccessor,
   FormControlDirective,
   FormsModule,
@@ -7,27 +15,19 @@ import {
   RequiredValidator
 } from "./chunk-HAUCSGP4.js";
 import {
-  FNFieldMessage
-} from "./chunk-QPERKEQ5.js";
-import {
   FNLabel
-} from "./chunk-F7OTGTJ5.js";
-import {
-  FNIconComponent,
-  FNToast,
-  ToastService
-} from "./chunk-GPRICQG7.js";
+} from "./chunk-ENHLTDN7.js";
 import "./chunk-55VUH47M.js";
-import {
-  CommonModule,
-  NgClass,
-  NgStyle
-} from "./chunk-3PIUJSML.js";
 import {
   TranslateModule,
   TranslatePipe,
   TranslateService
 } from "./chunk-JZDDGXGG.js";
+import {
+  CommonModule,
+  NgClass,
+  NgStyle
+} from "./chunk-3PIUJSML.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -48,6 +48,7 @@ import {
   ɵɵStandaloneFeature,
   ɵɵadvance,
   ɵɵattribute,
+  ɵɵclassMap,
   ɵɵclassProp,
   ɵɵconditional,
   ɵɵdefineComponent,
@@ -136,17 +137,18 @@ var _c8 = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => ({
 });
 function FNInput_Conditional_0_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-label", 2);
+    ɵɵelement(0, "fn-label", 4);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(2);
-    ɵɵproperty("for", ctx_r0.uniqueId)("label", ctx_r0.field.label)("required", ctx_r0.field.required || false)("hideOptional", ctx_r0.field.hideOptional || false)("color", ctx_r0.field.color || "#03182b")("variant", ctx_r0.field.labelVariant || "p1")("statusLabel", ctx_r0.field.statusLabel);
+    ɵɵclassMap("!text-[var(--Base-70)]");
+    ɵɵproperty("for", ctx_r0.uniqueId)("label", ctx_r0.field.label)("required", ctx_r0.field.required || false)("hideOptional", ctx_r0.field.hideOptional || false)("variant", ctx_r0.field.labelVariant || "p4")("statusLabel", ctx_r0.field.statusLabel);
   }
 }
 function FNInput_Conditional_0_Case_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "textarea", 4, 0);
+    ɵɵelementStart(0, "textarea", 5, 0);
     ɵɵpipe(2, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_3_Template_textarea_input_0_listener($event) {
       ɵɵrestoreView(_r2);
@@ -170,7 +172,7 @@ function FNInput_Conditional_0_Case_3_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 7);
+    ɵɵelement(0, "fn-icon", 8);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -180,7 +182,7 @@ function FNInput_Conditional_0_Case_4_Conditional_2_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 13);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_3_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r4);
       const ctx_r0 = ɵɵnextContext(3);
@@ -205,7 +207,7 @@ function FNInput_Conditional_0_Case_4_Conditional_3_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_7_Template_span_click_0_listener() {
       ɵɵrestoreView(_r5);
       const ctx_r0 = ɵɵnextContext(3);
@@ -215,7 +217,7 @@ function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.togglePasswordVisibility());
     });
-    ɵɵelement(1, "fn-icon", 7);
+    ɵɵelement(1, "fn-icon", 8);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -227,7 +229,7 @@ function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template_span_click_0_listener() {
       ɵɵrestoreView(_r7);
       const ctx_r0 = ɵɵnextContext(4);
@@ -237,7 +239,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 7);
+    ɵɵelement(1, "fn-icon", 8);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -248,7 +250,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, c
 function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_8_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r6);
       const ctx_r0 = ɵɵnextContext(3);
@@ -258,9 +260,9 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(1, "fn-icon", 15);
+    ɵɵelement(1, "fn-icon", 16);
     ɵɵelementEnd();
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template, 2, 4, "span", 11);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template, 2, 4, "span", 12);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -273,7 +275,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 17);
+    ɵɵelementStart(0, "span", 18);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template_span_click_0_listener() {
       ɵɵrestoreView(_r9);
       const ctx_r0 = ɵɵnextContext(4);
@@ -283,7 +285,7 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 15);
+    ɵɵelement(1, "fn-icon", 16);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -296,7 +298,7 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, c
 function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Template_span_click_0_listener() {
       ɵɵrestoreView(_r8);
       const ctx_r0 = ɵɵnextContext(3);
@@ -306,9 +308,9 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.togglePasswordVisibility());
     });
-    ɵɵelement(1, "fn-icon", 7);
+    ɵɵelement(1, "fn-icon", 8);
     ɵɵelementEnd();
-    ɵɵelementStart(2, "span", 14);
+    ɵɵelementStart(2, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Template_span_click_2_listener($event) {
       ɵɵrestoreView(_r8);
       const ctx_r0 = ɵɵnextContext(3);
@@ -318,9 +320,9 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(3, "fn-icon", 15);
+    ɵɵelement(3, "fn-icon", 16);
     ɵɵelementEnd();
-    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 5, "span", 16);
+    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 5, "span", 17);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -334,15 +336,15 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 12)(1, "div", 18)(2, "span", 19);
+    ɵɵelementStart(0, "div", 13)(1, "div", 19)(2, "span", 20);
     ɵɵtext(3);
     ɵɵpipe(4, "translate");
     ɵɵelementEnd();
-    ɵɵelementStart(5, "div", 20);
-    ɵɵelement(6, "fn-icon", 7);
+    ɵɵelementStart(5, "div", 21);
+    ɵɵelement(6, "fn-icon", 8);
     ɵɵelementEnd()();
-    ɵɵelementStart(7, "div", 21);
-    ɵɵelement(8, "div", 22);
+    ɵɵelementStart(7, "div", 22);
+    ɵɵelement(8, "div", 23);
     ɵɵelementEnd()();
   }
   if (rf & 2) {
@@ -361,10 +363,10 @@ function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 5)(1, "div", 6);
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_2_Template, 1, 4, "fn-icon", 7)(3, FNInput_Conditional_0_Case_4_Conditional_3_Template, 2, 7, "span", 8);
+    ɵɵelementStart(0, "div", 6)(1, "div", 7);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_2_Template, 1, 4, "fn-icon", 8)(3, FNInput_Conditional_0_Case_4_Conditional_3_Template, 2, 7, "span", 9);
     ɵɵelementEnd();
-    ɵɵelementStart(4, "input", 9);
+    ɵɵelementStart(4, "input", 10);
     ɵɵpipe(5, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_4_Template_input_input_4_listener($event) {
       ɵɵrestoreView(_r3);
@@ -380,10 +382,10 @@ function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
       return ɵɵresetView(ctx_r0.handlePasswordBlur($event));
     });
     ɵɵelementEnd();
-    ɵɵelementStart(6, "div", 10);
-    ɵɵtemplate(7, FNInput_Conditional_0_Case_4_Conditional_7_Template, 2, 4, "span", 11)(8, FNInput_Conditional_0_Case_4_Conditional_8_Template, 3, 3)(9, FNInput_Conditional_0_Case_4_Conditional_9_Template, 5, 7);
+    ɵɵelementStart(6, "div", 11);
+    ɵɵtemplate(7, FNInput_Conditional_0_Case_4_Conditional_7_Template, 2, 4, "span", 12)(8, FNInput_Conditional_0_Case_4_Conditional_8_Template, 3, 3)(9, FNInput_Conditional_0_Case_4_Conditional_9_Template, 5, 7);
     ɵɵelementEnd()();
-    ɵɵtemplate(10, FNInput_Conditional_0_Case_4_Conditional_10_Template, 9, 15, "div", 12);
+    ɵɵtemplate(10, FNInput_Conditional_0_Case_4_Conditional_10_Template, 9, 15, "div", 13);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(2);
@@ -401,7 +403,7 @@ function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 7);
+    ɵɵelement(0, "fn-icon", 8);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -411,7 +413,7 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template(rf, c
 function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r11 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 13);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r11);
       const ctx_r0 = ɵɵnextContext(4);
@@ -435,8 +437,8 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template(rf, c
 }
 function FNInput_Conditional_0_Case_5_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 6);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 7)(2, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template, 2, 7, "span", 8);
+    ɵɵelementStart(0, "div", 7);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 8)(2, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template, 2, 7, "span", 9);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -450,9 +452,9 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 5);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Template, 3, 2, "div", 6);
-    ɵɵelementStart(2, "input", 23);
+    ɵɵelementStart(0, "div", 6);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Template, 3, 2, "div", 7);
+    ɵɵelementStart(2, "input", 24);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_5_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r10);
@@ -487,7 +489,7 @@ function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 7);
+    ɵɵelement(0, "fn-icon", 8);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -497,7 +499,7 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template(rf, c
 function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 13);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r13);
       const ctx_r0 = ɵɵnextContext(4);
@@ -521,8 +523,8 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 6);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 7)(2, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template, 2, 7, "span", 8);
+    ɵɵelementStart(0, "div", 7);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 8)(2, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template, 2, 7, "span", 9);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -536,7 +538,7 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template_span_click_0_listener() {
       ɵɵrestoreView(_r15);
       const ctx_r0 = ɵɵnextContext(4);
@@ -546,7 +548,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 15);
+    ɵɵelement(1, "fn-icon", 16);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -557,7 +559,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, c
 function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r14 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 14);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_5_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r14);
       const ctx_r0 = ɵɵnextContext(3);
@@ -567,9 +569,9 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(1, "fn-icon", 15);
+    ɵɵelement(1, "fn-icon", 16);
     ɵɵelementEnd();
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template, 2, 2, "span", 11);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template, 2, 2, "span", 12);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -582,7 +584,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r16 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 13);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r16);
       const ctx_r0 = ɵɵnextContext(4);
@@ -606,7 +608,7 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 7);
+    ɵɵelement(0, "fn-icon", 8);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -615,7 +617,7 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵtemplate(0, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template, 2, 7, "span", 8)(1, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template, 1, 4, "fn-icon", 7);
+    ɵɵtemplate(0, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template, 2, 7, "span", 9)(1, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template, 1, 4, "fn-icon", 8);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -627,9 +629,9 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 24);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Template, 3, 2, "div", 6);
-    ɵɵelementStart(2, "input", 25);
+    ɵɵelementStart(0, "div", 25);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Template, 3, 2, "div", 7);
+    ɵɵelementStart(2, "input", 26);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_6_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r12);
@@ -645,7 +647,7 @@ function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
       return ɵɵresetView(ctx_r0.onFocus());
     });
     ɵɵelementEnd();
-    ɵɵelementStart(4, "div", 10);
+    ɵɵelementStart(4, "div", 11);
     ɵɵtemplate(5, FNInput_Conditional_0_Case_6_Conditional_5_Template, 3, 3)(6, FNInput_Conditional_0_Case_6_Conditional_6_Template, 2, 2);
     ɵɵelementEnd()();
   }
@@ -673,7 +675,7 @@ function FNInput_Conditional_0_Conditional_7_Template(rf, ctx) {
 function FNInput_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     ɵɵelementStart(0, "div", 1);
-    ɵɵtemplate(1, FNInput_Conditional_0_Conditional_1_Template, 1, 7, "fn-label", 2);
+    ɵɵtemplate(1, FNInput_Conditional_0_Conditional_1_Template, 1, 8, "fn-label", 2);
     ɵɵelementContainerStart(2);
     ɵɵtemplate(3, FNInput_Conditional_0_Case_3_Template, 3, 19)(4, FNInput_Conditional_0_Case_4_Template, 11, 27)(5, FNInput_Conditional_0_Case_5_Template, 4, 28)(6, FNInput_Conditional_0_Case_6_Template, 7, 29);
     ɵɵelementContainerEnd();
@@ -1612,7 +1614,7 @@ var FNInput = class _FNInput {
     features: [ɵɵStandaloneFeature],
     decls: 1,
     vars: 1,
-    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "color", "variant", "statusLabel"], [3, "field", "control", "hasFocus"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "cursor-pointer", 3, "ngClass"], [1, "cursor-pointer", 3, "click", "keydown", "ngClass"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"]],
+    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "class", "variant", "statusLabel"], [3, "field", "control", "hasFocus"], [3, "for", "label", "required", "hideOptional", "variant", "statusLabel"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "cursor-pointer", 3, "ngClass"], [1, "cursor-pointer", 3, "click", "keydown", "ngClass"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"]],
     template: function FNInput_Template(rf, ctx) {
       if (rf & 1) {
         ɵɵtemplate(0, FNInput_Conditional_0_Template, 9, 3);
@@ -1622,7 +1624,7 @@ var FNInput = class _FNInput {
       }
     },
     dependencies: [FormsModule, DefaultValueAccessor, NgControlStatus, RequiredValidator, CommonModule, NgClass, NgStyle, ReactiveFormsModule, FormControlDirective, TranslateModule, TranslatePipe, FNLabel, FNFieldMessage, FNIconComponent, FNToast],
-    styles: [".fn-input-container[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%}.fn-label[_ngcontent-%COMP%]{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label[_ngcontent-%COMP%]   span[_ngcontent-%COMP%]{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field[_ngcontent-%COMP%]{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field[_ngcontent-%COMP%]::placeholder{color:#c4cdd2}.fn-input-field[_ngcontent-%COMP%]:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error[_ngcontent-%COMP%]{border-bottom-color:#ef3e42}.fn-input-field.success[_ngcontent-%COMP%]{border-bottom-color:#6cc24a}.fn-input-field.disabled[_ngcontent-%COMP%]{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10[_ngcontent-%COMP%]{padding-left:40px!important}.fn-input-field.has-prefix-text[_ngcontent-%COMP%]{padding-left:100px!important}.fn-input-field.pr-10[_ngcontent-%COMP%]{padding-right:40px!important}.fn-input-field.has-suffix-text[_ngcontent-%COMP%]{padding-right:120px!important}.fn-input-field.pr-12[_ngcontent-%COMP%]{padding-right:44px!important}.fn-input-field.pr-20[_ngcontent-%COMP%]{padding-right:72px!important}.fn-input-field.pr-24[_ngcontent-%COMP%]{padding-right:88px!important}.fn-input-field.pr-30[_ngcontent-%COMP%]{padding-right:104px!important}.fn-input-field.pr-32[_ngcontent-%COMP%]{padding-right:120px!important}.icon-container[_ngcontent-%COMP%]{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative[_ngcontent-%COMP%]{position:relative}.absolute[_ngcontent-%COMP%]{position:absolute}.right-0[_ngcontent-%COMP%]{right:0}.left-0[_ngcontent-%COMP%]{left:0}.top-1\\/2[_ngcontent-%COMP%]{top:50%}.-translate-y-1\\/2[_ngcontent-%COMP%]{transform:translateY(-50%)}.flex[_ngcontent-%COMP%]{display:flex}.items-center[_ngcontent-%COMP%]{align-items:center}.justify-between[_ngcontent-%COMP%]{justify-content:space-between}.gap-1[_ngcontent-%COMP%]{gap:.25rem}.gap-2[_ngcontent-%COMP%]{gap:.5rem}.pr-3[_ngcontent-%COMP%]{padding-right:.75rem}.pl-3[_ngcontent-%COMP%]{padding-left:.75rem}.mt-2[_ngcontent-%COMP%]{margin-top:.5rem}.space-y-1[_ngcontent-%COMP%] > [_ngcontent-%COMP%]:not([hidden]) ~ [_ngcontent-%COMP%]:not([hidden]){margin-top:.25rem}.text-xs[_ngcontent-%COMP%]{font-size:.75rem}.font-medium[_ngcontent-%COMP%]{font-weight:500}.h-1\\.5[_ngcontent-%COMP%]{height:.375rem}.w-full[_ngcontent-%COMP%]{width:100%}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:#eef0f2}.rounded-full[_ngcontent-%COMP%]{border-radius:9999px}.overflow-hidden[_ngcontent-%COMP%]{overflow:hidden}.transition-all[_ngcontent-%COMP%]{transition-property:all}.duration-300[_ngcontent-%COMP%]{transition-duration:.3s}.cursor-pointer[_ngcontent-%COMP%]{cursor:pointer}.opacity-50[_ngcontent-%COMP%]{opacity:.5}.cursor-not-allowed[_ngcontent-%COMP%]{cursor:not-allowed}.text-ellipsis[_ngcontent-%COMP%]{text-overflow:ellipsis}.whitespace-nowrap[_ngcontent-%COMP%]{white-space:nowrap}"],
+    styles: ["[data-theme=default][_ngcontent-%COMP%]{--RHB-Premier-Blue-100: #002353;--RHB-Premier-Silver-100: #c1cdd8;--RHB-Blue-10: #ebf7ff;--RHB-Blue-20: #def1ff;--RHB-Blue-30: #bbe3ff;--RHB-Blue-40: #99d4ff;--RHB-Blue-50: #78c5ff;--RHB-Blue-60: #5cb5f9;--RHB-Blue-70: #3d9ee9;--RHB-Blue-80: #258bdd;--RHB-Blue-90: #0b77ca;--RHB-Blue-100: #0067b1;--RHB-Blue-200: #0158a0;--RHB-Blue-300: #004b90;--RHB-Blue-400: #003d75;--RHB-Blue-500: #003362;--RHB-Light-Blue-10: #eff9fd;--RHB-Light-Blue-100: #5bc2e7;--RHB-Red-10: #ffeeee;--RHB-Red-20: #fed7db;--RHB-Red-30: #fec0c9;--RHB-Red-40: #fda9b6;--RHB-Red-50: #fc91a3;--RHB-Red-60: #fc7a91;--RHB-Red-70: #fb637e;--RHB-Red-80: #f85a6f;--RHB-Red-90: #f55160;--RHB-Red-100: #ef3e42;--RHB-Red-200: #d72f32;--RHB-Red-300: #bf1f21;--RHB-Red-400: #a61011;--RHB-Red-500: #860000;--Green-10: #f0f9ed;--Green-20: #e2f3db;--Green-30: #d3edc9;--Green-40: #c4e7b7;--Green-50: #b5e1a4;--Green-60: #a7da92;--Green-70: #98d480;--Green-80: #89ce6e;--Green-90: #7bc85c;--Green-100: #6cc24a;--Green-200: #54af30;--Green-300: #2b8809;--Green-400: #065c00;--Green-500: #004300;--Green-600: #519c66;--Orange-10: #fff4eb;--Orange-20: #fdebda;--Orange-30: #fbe2c9;--Orange-40: #f9d8b9;--Orange-50: #f7cfa8;--Orange-60: #f4c697;--Orange-70: #f2bd86;--Orange-80: #f0b376;--Orange-90: #eeaa65;--Orange-100: #eca154;--Orange-200: #eb8a22;--Orange-300: #ed6c1c;--Orange-400: #de4e01;--Orange-500: #c0410b;--Purple-10: #f9f7ff;--Purple-20: #e7e4f4;--Purple-30: #d7d3e9;--Purple-40: #c6c3df;--Purple-50: #b6b3d4;--Purple-60: #a6a3c9;--Purple-70: #9692be;--Purple-80: #8682b3;--Purple-90: #7572a9;--Purple-100: #615e9b;--Purple-200: #555193;--Purple-300: #48448b;--Purple-400: #3c3782;--Purple-500: #2f2a7a;--Base-0: #ffffff;--Base-10: #eef0f2;--Base-20: #e0e4e9;--Base-30: #c4cdd2;--Base-40: #9aa3aa;--Base-50: #818c95;--Base-60: #687480;--Base-70: #4f5d6b;--Base-80: #354655;--Base-90: #1c2f40;--Base-100: #03182b;--Gradient-top: #91d6ef}.fn-input-container[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%;gap:.5rem}.fn-input-field[_ngcontent-%COMP%]{width:100%;height:2rem;line-height:1.5rem;padding:0 0 .4375rem;background-color:transparent;border:0;border-bottom:1px solid var(--Base-30);border-radius:0;font-family:Outfit,sans-serif;font-size:1rem;color:var(--Base-100);transition:border-color .2s ease}.fn-input-field[_ngcontent-%COMP%]::placeholder{color:var(--Base-50)!important;font-size:1rem!important}.fn-input-field[_ngcontent-%COMP%]:focus{outline:none;border-bottom-color:var(--RHB-Blue-100);caret-color:var(--RHB-Blue-100)}.fn-input-field.error[_ngcontent-%COMP%]{border-bottom-color:var(--RHB-Red-100)!important}.fn-input-field.success[_ngcontent-%COMP%]{border-bottom-color:var(--Green-100)!important}.fn-input-field.disabled[_ngcontent-%COMP%]{opacity:1;color:var(--Base-30)!important;border-bottom-color:var(--Base-30)!important;cursor:not-allowed}.fn-input-field.text-\\__ph-0__[_ngcontent-%COMP%]{font-size:24px!important;line-height:32px!important;font-weight:700!important}.fn-input-field.pl-10[_ngcontent-%COMP%]{padding-left:2.5rem!important}.fn-input-field.has-prefix-text[_ngcontent-%COMP%]{padding-left:6.25rem!important}.fn-input-field.pr-10[_ngcontent-%COMP%]{padding-right:2.5rem!important}.fn-input-field.has-suffix-text[_ngcontent-%COMP%]{padding-right:7.5rem!important}.fn-input-field.pr-12[_ngcontent-%COMP%]{padding-right:3rem!important}.fn-input-field.pr-20[_ngcontent-%COMP%]{padding-right:4.5rem!important}.fn-input-field.pr-24[_ngcontent-%COMP%]{padding-right:5.5rem!important}.fn-input-field.pr-30[_ngcontent-%COMP%]{padding-right:6.5rem!important}.fn-input-field.pr-32[_ngcontent-%COMP%]{padding-right:7.5rem!important}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:var(--Base-10)}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:var(--RHB-Red-100)}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:var(--Orange-100)}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:var(--Green-100)}.relative[_ngcontent-%COMP%]{position:relative}.absolute[_ngcontent-%COMP%]{position:absolute}.right-0[_ngcontent-%COMP%]{right:0}.left-0[_ngcontent-%COMP%]{left:0}.top-1\\/2[_ngcontent-%COMP%]{top:50%}.-translate-y-1\\/2[_ngcontent-%COMP%]{transform:translateY(-50%)}.flex[_ngcontent-%COMP%]{display:flex}.flex-col[_ngcontent-%COMP%]{flex-direction:column}.items-center[_ngcontent-%COMP%]{align-items:center}.justify-between[_ngcontent-%COMP%]{justify-content:space-between}.gap-1[_ngcontent-%COMP%]{gap:.25rem}.gap-2[_ngcontent-%COMP%]{gap:.5rem}.pr-3[_ngcontent-%COMP%]{padding-right:.75rem}.pl-3[_ngcontent-%COMP%]{padding-left:.75rem}.mt-2[_ngcontent-%COMP%]{margin-top:.5rem}.space-y-1[_ngcontent-%COMP%] > [_ngcontent-%COMP%]:not([hidden]) ~ [_ngcontent-%COMP%]:not([hidden]){margin-top:.25rem}.text-xs[_ngcontent-%COMP%]{font-size:.75rem}.font-medium[_ngcontent-%COMP%]{font-weight:500}.h-1\\.5[_ngcontent-%COMP%]{height:.375rem}.w-full[_ngcontent-%COMP%]{width:100%}.rounded-full[_ngcontent-%COMP%]{border-radius:9999px}.overflow-hidden[_ngcontent-%COMP%]{overflow:hidden}.transition-all[_ngcontent-%COMP%]{transition-property:all}.duration-300[_ngcontent-%COMP%]{transition-duration:.3s}.cursor-pointer[_ngcontent-%COMP%]{cursor:pointer}.opacity-50[_ngcontent-%COMP%]{opacity:.5}.cursor-not-allowed[_ngcontent-%COMP%]{cursor:not-allowed}.text-ellipsis[_ngcontent-%COMP%]{text-overflow:ellipsis}.whitespace-nowrap[_ngcontent-%COMP%]{white-space:nowrap}"],
     changeDetection: 0
   });
 };
@@ -1642,8 +1644,8 @@ var FNInput = class _FNInput {
         [label]="field.label"\r
         [required]="field.required || false"\r
         [hideOptional]="field.hideOptional || false"\r
-        [color]="field.color || '#03182b'"\r
-        [variant]="field.labelVariant || 'p1'"\r
+        [class]="'!text-[var(--Base-70)]'"\r
+        [variant]="field.labelVariant || 'p4'"\r
         [statusLabel]="field.statusLabel"\r
       ></fn-label>\r
     }\r
@@ -2037,7 +2039,7 @@ var FNInput = class _FNInput {
   <fn-toast></fn-toast>\r
 }\r
 `,
-      styles: [".fn-input-container{display:flex;flex-direction:column;width:100%}.fn-label{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label span{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field::placeholder{color:#c4cdd2}.fn-input-field:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error{border-bottom-color:#ef3e42}.fn-input-field.success{border-bottom-color:#6cc24a}.fn-input-field.disabled{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10{padding-left:40px!important}.fn-input-field.has-prefix-text{padding-left:100px!important}.fn-input-field.pr-10{padding-right:40px!important}.fn-input-field.has-suffix-text{padding-right:120px!important}.fn-input-field.pr-12{padding-right:44px!important}.fn-input-field.pr-20{padding-right:72px!important}.fn-input-field.pr-24{padding-right:88px!important}.fn-input-field.pr-30{padding-right:104px!important}.fn-input-field.pr-32{padding-right:120px!important}.icon-container{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative{position:relative}.absolute{position:absolute}.right-0{right:0}.left-0{left:0}.top-1\\/2{top:50%}.-translate-y-1\\/2{transform:translateY(-50%)}.flex{display:flex}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.pr-3{padding-right:.75rem}.pl-3{padding-left:.75rem}.mt-2{margin-top:.5rem}.space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}.text-xs{font-size:.75rem}.font-medium{font-weight:500}.h-1\\.5{height:.375rem}.w-full{width:100%}.bg-\\[\\#eef0f2\\]{background-color:#eef0f2}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.transition-all{transition-property:all}.duration-300{transition-duration:.3s}.cursor-pointer{cursor:pointer}.opacity-50{opacity:.5}.cursor-not-allowed{cursor:not-allowed}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}\n"]
+      styles: ["[data-theme=default]{--RHB-Premier-Blue-100: #002353;--RHB-Premier-Silver-100: #c1cdd8;--RHB-Blue-10: #ebf7ff;--RHB-Blue-20: #def1ff;--RHB-Blue-30: #bbe3ff;--RHB-Blue-40: #99d4ff;--RHB-Blue-50: #78c5ff;--RHB-Blue-60: #5cb5f9;--RHB-Blue-70: #3d9ee9;--RHB-Blue-80: #258bdd;--RHB-Blue-90: #0b77ca;--RHB-Blue-100: #0067b1;--RHB-Blue-200: #0158a0;--RHB-Blue-300: #004b90;--RHB-Blue-400: #003d75;--RHB-Blue-500: #003362;--RHB-Light-Blue-10: #eff9fd;--RHB-Light-Blue-100: #5bc2e7;--RHB-Red-10: #ffeeee;--RHB-Red-20: #fed7db;--RHB-Red-30: #fec0c9;--RHB-Red-40: #fda9b6;--RHB-Red-50: #fc91a3;--RHB-Red-60: #fc7a91;--RHB-Red-70: #fb637e;--RHB-Red-80: #f85a6f;--RHB-Red-90: #f55160;--RHB-Red-100: #ef3e42;--RHB-Red-200: #d72f32;--RHB-Red-300: #bf1f21;--RHB-Red-400: #a61011;--RHB-Red-500: #860000;--Green-10: #f0f9ed;--Green-20: #e2f3db;--Green-30: #d3edc9;--Green-40: #c4e7b7;--Green-50: #b5e1a4;--Green-60: #a7da92;--Green-70: #98d480;--Green-80: #89ce6e;--Green-90: #7bc85c;--Green-100: #6cc24a;--Green-200: #54af30;--Green-300: #2b8809;--Green-400: #065c00;--Green-500: #004300;--Green-600: #519c66;--Orange-10: #fff4eb;--Orange-20: #fdebda;--Orange-30: #fbe2c9;--Orange-40: #f9d8b9;--Orange-50: #f7cfa8;--Orange-60: #f4c697;--Orange-70: #f2bd86;--Orange-80: #f0b376;--Orange-90: #eeaa65;--Orange-100: #eca154;--Orange-200: #eb8a22;--Orange-300: #ed6c1c;--Orange-400: #de4e01;--Orange-500: #c0410b;--Purple-10: #f9f7ff;--Purple-20: #e7e4f4;--Purple-30: #d7d3e9;--Purple-40: #c6c3df;--Purple-50: #b6b3d4;--Purple-60: #a6a3c9;--Purple-70: #9692be;--Purple-80: #8682b3;--Purple-90: #7572a9;--Purple-100: #615e9b;--Purple-200: #555193;--Purple-300: #48448b;--Purple-400: #3c3782;--Purple-500: #2f2a7a;--Base-0: #ffffff;--Base-10: #eef0f2;--Base-20: #e0e4e9;--Base-30: #c4cdd2;--Base-40: #9aa3aa;--Base-50: #818c95;--Base-60: #687480;--Base-70: #4f5d6b;--Base-80: #354655;--Base-90: #1c2f40;--Base-100: #03182b;--Gradient-top: #91d6ef}.fn-input-container{display:flex;flex-direction:column;width:100%;gap:.5rem}.fn-input-field{width:100%;height:2rem;line-height:1.5rem;padding:0 0 .4375rem;background-color:transparent;border:0;border-bottom:1px solid var(--Base-30);border-radius:0;font-family:Outfit,sans-serif;font-size:1rem;color:var(--Base-100);transition:border-color .2s ease}.fn-input-field::placeholder{color:var(--Base-50)!important;font-size:1rem!important}.fn-input-field:focus{outline:none;border-bottom-color:var(--RHB-Blue-100);caret-color:var(--RHB-Blue-100)}.fn-input-field.error{border-bottom-color:var(--RHB-Red-100)!important}.fn-input-field.success{border-bottom-color:var(--Green-100)!important}.fn-input-field.disabled{opacity:1;color:var(--Base-30)!important;border-bottom-color:var(--Base-30)!important;cursor:not-allowed}.fn-input-field.text-\\[24px\\]{font-size:24px!important;line-height:32px!important;font-weight:700!important}.fn-input-field.pl-10{padding-left:2.5rem!important}.fn-input-field.has-prefix-text{padding-left:6.25rem!important}.fn-input-field.pr-10{padding-right:2.5rem!important}.fn-input-field.has-suffix-text{padding-right:7.5rem!important}.fn-input-field.pr-12{padding-right:3rem!important}.fn-input-field.pr-20{padding-right:4.5rem!important}.fn-input-field.pr-24{padding-right:5.5rem!important}.fn-input-field.pr-30{padding-right:6.5rem!important}.fn-input-field.pr-32{padding-right:7.5rem!important}.bg-\\[\\#eef0f2\\]{background-color:var(--Base-10)}.bg-\\[\\#ef3e42\\]{background-color:var(--RHB-Red-100)}.bg-\\[\\#ff9f00\\]{background-color:var(--Orange-100)}.bg-\\[\\#6cc24a\\]{background-color:var(--Green-100)}.relative{position:relative}.absolute{position:absolute}.right-0{right:0}.left-0{left:0}.top-1\\/2{top:50%}.-translate-y-1\\/2{transform:translateY(-50%)}.flex{display:flex}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.pr-3{padding-right:.75rem}.pl-3{padding-left:.75rem}.mt-2{margin-top:.5rem}.space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}.text-xs{font-size:.75rem}.font-medium{font-weight:500}.h-1\\.5{height:.375rem}.w-full{width:100%}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.transition-all{transition-property:all}.duration-300{transition-duration:.3s}.cursor-pointer{cursor:pointer}.opacity-50{opacity:.5}.cursor-not-allowed{cursor:not-allowed}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}\n"]
     }]
   }], () => [{
     type: ChangeDetectorRef

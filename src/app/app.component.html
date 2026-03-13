@@ -246,6 +246,23 @@
                 <fn-input [field]="textFloatIn" [form]="form"></fn-input>
                 <fn-input [field]="textFloatOver" [form]="form"></fn-input>
               </div>
+              <div class="pt-4 border-t border-neutral-100">
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4 block italic"
+                  >New in 0.0.18</span
+                >
+                <fn-input [field]="addressInput" [form]="form"></fn-input>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                  <fn-input
+                    [field]="statusSuccessInput"
+                    [form]="form"
+                  ></fn-input>
+                  <fn-input
+                    [field]="statusWarningInput"
+                    [form]="form"
+                  ></fn-input>
+                </div>
+              </div>
             </div>
           </div>
 
