@@ -11,6 +11,7 @@ import {
 } from "@angular/forms";
 import { inject } from "@angular/core";
 import { FNToast, ToastService } from "fn-toast";
+import { FNFieldMessage } from "fn-field-message";
 
 @Component({
   selector: "app-root",
@@ -22,6 +23,7 @@ import { FNToast, ToastService } from "fn-toast";
     FNInput,
     ReactiveFormsModule,
     FNToast,
+    FNFieldMessage,
   ],
   providers: [],
   templateUrl: "./app.component.html",
@@ -30,274 +32,167 @@ import { FNToast, ToastService } from "fn-toast";
       :host ::ng-deep fn-label .fn-label {
         width: 100%;
       }
+      :host ::ng-deep .cursor-not-allowed {
+        cursor: pointer !important;
+        opacity: 1 !important;
+      }
     `,
   ],
 })
 export class AppComponent {
-  title = "UI Testing App";
+  title = "Component Showcase";
   form: FormGroup;
-  private toastService = inject(ToastService);
+  private fb = inject(FormBuilder);
+  public toastService = inject(ToastService);
 
-  showSuccess() {
-    this.toastService.success("Success Toast Triggered!", "Success");
-  }
-
-  showError() {
-    this.toastService.error("Error Toast Triggered!", "Error");
-  }
-
-  showWarn() {
-    this.toastService.warn("Warning Toast Triggered!", "Warning");
-  }
-
-  showInfo() {
-    this.toastService.info("Info Toast Triggered!", "Info");
-  }
-
-  clearAll() {
-    this.toastService.clear();
-  }
-
-  // 1. Styling Props Demo
-  stylingProps: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "stylingProps",
+  // --- FN-LABEL VARIETIES ---
+  labelBasic = { label: "Standard Label" };
+  labelRequired = { label: "Required Field", required: true };
+  labelCustomStyle = {
     label: "Custom Styled Label",
-    color: "#e11d48", // Rose 600
+    color: "#e11d48",
     labelSize: "18px",
-    valueColor: "#2563eb", // Blue 600
-    valueSize: "16px",
-    placeholder: "Styled text and label",
+    fontWeight: "bold",
+  };
+  labelWithHelper = {
+    label: "Label with Helper",
+    helperText: "This provides additional context.",
   };
 
-  // 2. Success Border & Optional
-  successBorderProps: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "successBorder",
-    label: "Valid Field (Success Border)",
-    hasSuccessBorder: true,
-    required: false,
-    hideOptional: true,
-    helperText: "Green border appears when valid",
-  };
+  // --- FN-INPUT VARIETIES ---
 
-  // 3. Alphanumeric restriction
-  alphanumericProps: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "alphanumeric",
-    label: "Username",
-    isAlphanumeric: true,
-    placeholder: "Only letters and numbers allowed",
-  };
-
-  // 4. Password with Weak Label
-  passwordWeakLabel: FNInputBase = {
-    fieldType: "FNInput",
-    type: "password",
-    name: "passwordWeak",
-    label: "Password with Custom Feedback",
-    feedback: true,
-    toggleMask: true,
-    weakLabel: "Very Weak!",
-    mediumLabel: "Average",
-    strongLabel: "Robust",
-  };
-
-  // 5. Currency with Decimal control
-  currencyAdvanced: FNInputBase = {
-    fieldType: "FNInput",
-    type: "number",
-    name: "currencyAdvanced",
-    label: "Advanced Currency (MYR)",
-    isCurrency: true,
-    currency: "MYR",
-    minFractionDigits: 3,
-    maxFractionDigits: 3,
-  };
-
-  // Existing Text Inputs
+  // 1. Text Inputs
   textBasic: FNInputBase = {
     fieldType: "FNInput",
     type: "text",
     name: "textBasic",
-    label: "Full Name",
-    placeholder: "Enter your full name",
+    label: "Basic Text Input",
+    placeholder: "Type something...",
     required: true,
   };
 
-  textWithAffix: FNInputBase = {
-    fieldType: "FNInput",
-    type: "email",
-    name: "textEmail",
-    label: "Email Address",
-    placeholder: "user@example.com",
-    prefix: {
-      icon: 'home',
-    },
-    suffix: {
-      text: "@gmail.com",
-      onClick: () => console.log("Suffix clicked"),
-    },
-  };
-
-  textDisabled: FNInputBase = {
+  textWithIcons: FNInputBase = {
     fieldType: "FNInput",
     type: "text",
-    name: "textDisabled",
-    label: "Reference Code (Read Only)",
-    value: "REF-123456",
-    disabled: true,
+    name: "textIcons",
+    label: "Input with Affixes",
+    prefix: { icon: "home" },
+    suffix: { text: ".com" },
   };
 
   textFloatIn: FNInputBase = {
     fieldType: "FNInput",
     type: "text",
     name: "textFloatIn",
-    label: "Inner Label",
+    label: "Float Label: In",
     floatLabelVariant: "in",
-    placeholder: "Style: in",
   };
 
   textFloatOver: FNInputBase = {
     fieldType: "FNInput",
     type: "text",
     name: "textFloatOver",
-    label: "Over Label",
+    label: "Float Label: Over",
     floatLabelVariant: "over",
-    placeholder: "Style: over",
   };
 
-  textFloatOn: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "textFloatOn",
-    label: "On Label",
-    floatLabelVariant: "on",
-    placeholder: "Style: on",
-  };
-
-  passwordBasic: FNInputBase = {
+  // 2. Password Inputs
+  passwordSecure: FNInputBase = {
     fieldType: "FNInput",
     type: "password",
-    name: "passwordBasic",
+    name: "passwordSecure",
     label: "Secure Password",
-  };
-
-  passwordFull: FNInputBase = {
-    fieldType: "FNInput",
-    type: "password",
-    name: "passwordFull",
-    label: "Better Password",
     toggleMask: true,
     feedback: true,
-    mediumLabel: "Getting there...",
-    strongLabel: "Perfect!",
   };
 
-  passwordGenerate: FNInputBase = {
+  passwordGenerate: any = {
     fieldType: "FNInput",
     type: "password",
     name: "passwordGenerate",
-    label: "API Secret Key",
+    label: "API Key Generator",
     isCopyText: true,
     hasGenerateKey: true,
-    toggleMask:true,
+    toggleMask: true,
     onGenerateKey: () => {
-      const newKey = "Generated-Key-" + Math.random().toString(36).substring(7);
+      const newKey = "key_" + Math.random().toString(36).substring(7);
       this.form.get("passwordGenerate")?.setValue(newKey);
-      this.toastService.success("New API Key generated successfully!", "Key Generated");
+      this.toastService.success("New key generated!", "Success");
     },
+    onCopy: () => this.toastService.info("Key copied to clipboard", "Copied"),
   };
 
-  numberBasic: FNInputBase = {
+  // 3. Number & Currency
+  numberSpinners: FNInputBase = {
     fieldType: "FNInput",
     type: "number",
-    name: "numberBasic",
-    label: "Quantity",
+    name: "numberSpinners",
+    label: "Quantity with Spinners",
     showButtons: true,
     min: 0,
     max: 100,
-    step: 5,
   };
 
-  numberCurrency: FNInputBase = {
+  currencyInput: FNInputBase = {
     fieldType: "FNInput",
     type: "number",
-    name: "numberCurrency",
-    label: "Donation Amount",
-    mode: "currency",
+    name: "currencyInput",
+    label: "Price (USD)",
+    isCurrency: true,
     currency: "USD",
     locale: "en-US",
-    useGrouping: true,
-    minFractionDigits: 2,
   };
 
-  numberVertical: FNInputBase = {
-    fieldType: "FNInput",
-    type: "number",
-    name: "numberVertical",
-    label: "Score Adjustment",
-    showButtons: true,
-    buttonLayout: "vertical",
-    incrementButtonIcon: "pi pi-plus",
-    decrementButtonIcon: "pi pi-minus",
-  };
-
-  textareaLarge: FNInputBase = {
+  // 4. Textarea
+  textareaInput: FNInputBase = {
     fieldType: "FNInput",
     type: "textarea",
-    name: "biography",
-    label: "About You",
-    placeholder: "Tell us about yourself...",
-    rows: 5,
-    maxLength: 500,
+    name: "description",
+    label: "Long Description",
+    placeholder: "Enter details here...",
+    rows: 4,
   };
 
-  visibilityTrigger: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "trigger",
-    label: "Type 'show' to reveal next field",
-    placeholder: "Try typing 'show'",
-  };
+  // --- TOAST TRIGGERS ---
+  showSuccess() {
+    this.toastService.success("Operation completed successfully!", "Success");
+  }
+  showError() {
+    this.toastService.error("An unexpected error occurred.", "Error");
+  }
+  showWarn() {
+    this.toastService.warn("Please check your input.", "Warning");
+  }
+  showInfo() {
+    this.toastService.info("This is an informative message.", "Information");
+  }
 
-  visibilityConditional: FNInputBase = {
-    fieldType: "FNInput",
-    type: "text",
-    name: "hiddenField",
-    label: "I was hidden!",
-    value: "Surprise!",
-    visibilityCondition: {
-      dependsOn: "trigger",
-      showWhen: "show",
+  // --- FN-FIELD-MESSAGE VARIETIES ---
+  fieldMessageConfig: any = {
+    name: "testField",
+    label: "Field with Validation",
+    helperText: "This is a helper text that appears when no errors exist.",
+    errors: {
+      required: "This field is absolutely mandatory.",
+      minlength: "Minimum 8 characters please!",
     },
   };
 
-  constructor(private readonly fb: FormBuilder) {
+  get testControl() {
+    return this.form.get("textBasic") as any;
+  }
+
+  constructor() {
     this.form = this.fb.group({
-      stylingProps: [""],
-      successBorder: ["Valid Text"],
-      alphanumeric: [""],
-      passwordWeak: [""],
-      currencyAdvanced: [123.456],
       textBasic: ["", [Validators.required]],
-      textEmail: [""],
-      textDisabled: [{ value: "REF-123456", disabled: true }],
+      textIcons: [""],
       textFloatIn: [""],
       textFloatOver: [""],
-      textFloatOn: [""],
-      passwordBasic: [""],
-      passwordFull: [""],
+      passwordSecure: [""],
       passwordGenerate: [""],
-      numberBasic: [10],
-      numberCurrency: [50],
-      numberVertical: [0],
-      biography: [""],
-      trigger: [""],
-      hiddenField: ["Surprise!"],
+      numberSpinners: [5],
+      currencyInput: [99.99],
+      description: [""],
     });
   }
 }
