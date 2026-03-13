@@ -1,0 +1,11 @@
+{
+  "authConfig": { "environment": "Development" },
+  "appConfig": {
+    "appVersion": "0.3.020",
+    "buildNumber": "20260312",
+    "baseUrl": "https://bo.payhubdev.ascertain.cloud/api/",
+    "merchantPortalUrl": "https://mp.rhbpaydev.rhbgroup.com/",
+    "apiUrl": "https://mp.payhubdev.ascertain.cloud/api/v1/payment/directResponse",
+    "redirectUrl": "https://mp.payhubdev.ascertain.cloud/api/v1/payment/indirectResponse"
+  }
+}

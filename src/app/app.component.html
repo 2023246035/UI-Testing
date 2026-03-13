@@ -1,0 +1,236 @@
+<fn-toast></fn-toast>
+
+<div class="p-8 max-w-5xl mx-auto bg-slate-50 min-h-screen">
+  <!-- Toast Testing Dashboard -->
+  <div class="mb-8 p-6 bg-white rounded-2xl shadow-md border border-slate-200">
+    <fn-label
+      [label]="'FNToast Testing Dashboard'"
+      variant="h2Bold"
+      className="mb-4 block"
+      color="#1e293b"
+    />
+    <div class="flex flex-wrap gap-4">
+      <button (click)="showSuccess()" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Success Toast</button>
+      <button (click)="showError()" class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Error Toast</button>
+      <button (click)="showWarn()" class="px-6 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Warning Toast</button>
+      <button (click)="showInfo()" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Info Toast</button>
+      <button (click)="clearAll()" class="px-6 py-2 border border-slate-300 text-slate-600 rounded-lg hover:bg-slate-50 transition ml-auto">Clear All</button>
+    </div>
+  </div>
+
+  <div class="mb-12 text-center">
+    <fn-label
+      [label]="'FNInput Component Showcase'"
+      variant="h1Bold"
+      className="mb-2 block"
+      color="#1e293b"
+    />
+    <fn-label
+      [label]="'Exploring all possible prop combinations and variants'"
+      variant="p1"
+      color="#64748b"
+    />
+  </div>
+
+  <form [formGroup]="form" class="space-y-12">
+    <!-- 1. STYLING & COMMON PROPS -->
+    <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+      <div class="flex items-center gap-2 mb-6 border-b pb-2">
+        <fn-label
+          [label]="'1. Styling & Common Props'"
+          variant="h2Bold"
+          color="#1e293b"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Custom Colors & Sizes'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#e11d48"
+          />
+          <fn-input
+            [field]="stylingProps"
+            [form]="form"
+          />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Success Border & Hidden Optional'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#10b981"
+          />
+          <fn-input [field]="successBorderProps" [form]="form" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TEXT & SECURITY -->
+    <section>
+      <div class="flex items-center gap-2 mb-6 border-b pb-2">
+        <fn-label
+          [label]="'2. Text & Security'"
+          variant="h2Bold"
+          color="#1e293b"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Alphanumeric Only'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#3b82f6"
+          />
+          <fn-input
+            [field]="alphanumericProps"
+            [form]="form"
+          />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Custom Weak/Strong Labels'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#8b5cf6"
+          />
+          <fn-input [field]="passwordWeakLabel" [form]="form" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ADVANCED CURRENCY & COMPONENTS -->
+    <section>
+      <div class="flex items-center gap-2 mb-6 border-b pb-2">
+        <fn-label
+          [label]="'3. Advanced Number & Component Inputs'"
+          variant="h2Bold"
+          color="#1e293b"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <fn-label
+            [label]="'MYR with 3 Decimals'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#f59e0b"
+          />
+          <fn-input [field]="currencyAdvanced" [form]="form" />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Mock Service Integration'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#ec4899"
+          />
+          <fn-input
+            [field]="passwordGenerate"
+            [form]="form"
+          />
+          <fn-label
+            [label]="'Check console for mock service logs'"
+            variant="p3"
+            color="#94a3b8"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TEXT INPUT VARIANTS (Existing) -->
+    <section>
+      <div class="flex items-center gap-2 mb-6 border-b pb-2">
+        <fn-label
+          [label]="'4. Text Input Variants'"
+          variant="h2Bold"
+          color="#1e293b"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Full Name (Required)'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#3b82f6"
+          />
+          <fn-input [field]="textBasic" [form]="form" />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'With Envelope Icon'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#3b82f6"
+          />
+          <fn-input [field]="textWithAffix" [form]="form" />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Floating: In'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#3b82f6"
+          />
+          <fn-input [field]="textFloatIn" [form]="form" />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Floating: Over'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#3b82f6"
+          />
+          <fn-input [field]="textFloatOver" [form]="form" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. VISIBILITY CONDITION SECTION -->
+    <section class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+      <div class="flex items-center gap-2 mb-6 border-b border-blue-200 pb-2">
+        <fn-label
+          [label]="'5. Visibility Condition Demo'"
+          variant="h2Bold"
+          color="#1e40af"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Trigger Field (Type \'show\')'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#2563eb"
+          />
+          <fn-input [field]="visibilityTrigger" [form]="form" />
+        </div>
+        <div class="space-y-2">
+          <fn-label
+            [label]="'Conditional Field'"
+            variant="p3Bold"
+            className="uppercase"
+            color="#2563eb"
+          />
+          <fn-input [field]="visibilityConditional" [form]="form" />
+        </div>
+      </div>
+    </section>
+  </form>
+
+  <div class="mt-12 p-8 bg-white rounded-2xl shadow-sm border border-slate-200">
+    <fn-label
+      [label]="'Form Value State'"
+      variant="h3Bold"
+      className="mb-4 block"
+      color="#1e293b"
+    />
+    <pre
+      class="bg-slate-900 text-slate-50 p-4 rounded-lg overflow-x-auto text-sm"
+      >{{ form.value | json }}</pre
+    >
+  </div>
+</div>
