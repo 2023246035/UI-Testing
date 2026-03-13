@@ -204,6 +204,7 @@ export class AppComponent {
     label: "API Secret Key",
     isCopyText: true,
     hasGenerateKey: true,
+    toggleMask:true,
     onGenerateKey: () => {
       const newKey = "Generated-Key-" + Math.random().toString(36).substring(7);
       this.form.get("passwordGenerate")?.setValue(newKey);

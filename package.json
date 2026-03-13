@@ -20,7 +20,7 @@
     "@arpudhabotupload/fn-icon-angular": "^1.0.0",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
-    "fn-input": "^0.0.14",
+    "fn-input": "^0.0.15",
     "fn-label": "^0.0.16",
     "fn-toast": "^0.0.9",
     "rxjs": "~7.8.0",
