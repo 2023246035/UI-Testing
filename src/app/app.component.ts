@@ -205,9 +205,9 @@ export class AppComponent {
     isCopyText: true,
     hasGenerateKey: true,
     onGenerateKey: () => {
-      this.form
-        .get("passwordGenerate")
-        ?.setValue("Generated-Key-" + Math.random().toString(36).substring(7));
+      const newKey = "Generated-Key-" + Math.random().toString(36).substring(7);
+      this.form.get("passwordGenerate")?.setValue(newKey);
+      this.toastService.success("New API Key generated successfully!", "Key Generated");
     },
   };
 

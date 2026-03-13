@@ -2,10 +2,10 @@ import {
   HttpBackend,
   HttpClient
 } from "./chunk-55VUH47M.js";
+import "./chunk-3PIUJSML.js";
 import {
   TranslateLoader
 } from "./chunk-JZDDGXGG.js";
-import "./chunk-3PIUJSML.js";
 import {
   Injectable,
   InjectionToken,

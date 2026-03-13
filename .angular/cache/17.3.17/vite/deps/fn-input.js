@@ -1,4 +1,7 @@
 import {
+  FNLabel
+} from "./chunk-F7OTGTJ5.js";
+import {
   DefaultValueAccessor,
   FormControlDirective,
   FormsModule,
@@ -7,22 +10,20 @@ import {
   RequiredValidator
 } from "./chunk-HAUCSGP4.js";
 import {
-  FNLabel
-} from "./chunk-ENHLTDN7.js";
-import {
-  FNIconComponent
-} from "./chunk-W4KRKGYW.js";
+  FNIconComponent,
+  FNToast
+} from "./chunk-GPRICQG7.js";
 import "./chunk-55VUH47M.js";
-import {
-  TranslateModule,
-  TranslatePipe,
-  TranslateService
-} from "./chunk-JZDDGXGG.js";
 import {
   CommonModule,
   NgClass,
   NgStyle
 } from "./chunk-3PIUJSML.js";
+import {
+  TranslateModule,
+  TranslatePipe,
+  TranslateService
+} from "./chunk-JZDDGXGG.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -43,7 +44,6 @@ import {
   ɵɵStandaloneFeature,
   ɵɵadvance,
   ɵɵattribute,
-  ɵɵclassMapInterpolate1,
   ɵɵclassProp,
   ɵɵconditional,
   ɵɵdefineComponent,
@@ -66,8 +66,6 @@ import {
   ɵɵpureFunction8,
   ɵɵpureFunctionV,
   ɵɵqueryRefresh,
-  ɵɵrepeater,
-  ɵɵrepeaterCreate,
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵstyleProp,
@@ -80,7 +78,6 @@ import {
 
 // node_modules/fn-input/fesm2022/fn-input.mjs
 var _c0 = ["fnTextarea"];
-var _forTrack0 = ($index, $item) => $item.id;
 var _c1 = (a0, a1, a2) => ({
   disabled: a0,
   error: a1,
@@ -149,7 +146,7 @@ function FNInput_Conditional_0_Conditional_1_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "textarea", 6, 0);
+    ɵɵelementStart(0, "textarea", 4, 0);
     ɵɵpipe(2, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_3_Template_textarea_input_0_listener($event) {
       ɵɵrestoreView(_r2);
@@ -173,7 +170,7 @@ function FNInput_Conditional_0_Case_3_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 9);
+    ɵɵelement(0, "fn-icon", 7);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -183,7 +180,7 @@ function FNInput_Conditional_0_Case_4_Conditional_2_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 15);
+    ɵɵelementStart(0, "span", 13);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_3_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r4);
       const ctx_r0 = ɵɵnextContext(3);
@@ -208,7 +205,7 @@ function FNInput_Conditional_0_Case_4_Conditional_3_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_7_Template_span_click_0_listener() {
       ɵɵrestoreView(_r5);
       const ctx_r0 = ɵɵnextContext(3);
@@ -218,7 +215,7 @@ function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.togglePasswordVisibility());
     });
-    ɵɵelement(1, "fn-icon", 9);
+    ɵɵelement(1, "fn-icon", 7);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -230,7 +227,7 @@ function FNInput_Conditional_0_Case_4_Conditional_7_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template_span_click_0_listener() {
       ɵɵrestoreView(_r7);
       const ctx_r0 = ɵɵnextContext(4);
@@ -240,7 +237,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 9);
+    ɵɵelement(1, "fn-icon", 7);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -251,7 +248,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template(rf, c
 function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_8_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r6);
       const ctx_r0 = ɵɵnextContext(3);
@@ -261,9 +258,9 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(1, "fn-icon", 17);
+    ɵɵelement(1, "fn-icon", 15);
     ɵɵelementEnd();
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template, 2, 4, "span", 13);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_8_Conditional_2_Template, 2, 4, "span", 11);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -276,7 +273,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 19);
+    ɵɵelementStart(0, "span", 17);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template_span_click_0_listener() {
       ɵɵrestoreView(_r9);
       const ctx_r0 = ɵɵnextContext(4);
@@ -286,7 +283,7 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 17);
+    ɵɵelement(1, "fn-icon", 15);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -299,7 +296,7 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, c
 function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Template_span_click_0_listener() {
       ɵɵrestoreView(_r8);
       const ctx_r0 = ɵɵnextContext(3);
@@ -309,9 +306,9 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.togglePasswordVisibility());
     });
-    ɵɵelement(1, "fn-icon", 9);
+    ɵɵelement(1, "fn-icon", 7);
     ɵɵelementEnd();
-    ɵɵelementStart(2, "span", 16);
+    ɵɵelementStart(2, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Template_span_click_2_listener($event) {
       ɵɵrestoreView(_r8);
       const ctx_r0 = ɵɵnextContext(3);
@@ -321,9 +318,9 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(3, "fn-icon", 17);
+    ɵɵelement(3, "fn-icon", 15);
     ɵɵelementEnd();
-    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 5, "span", 18);
+    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 5, "span", 16);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -337,15 +334,15 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 14)(1, "div", 20)(2, "span", 21);
+    ɵɵelementStart(0, "div", 12)(1, "div", 18)(2, "span", 19);
     ɵɵtext(3);
     ɵɵpipe(4, "translate");
     ɵɵelementEnd();
-    ɵɵelementStart(5, "div", 22);
-    ɵɵelement(6, "fn-icon", 9);
+    ɵɵelementStart(5, "div", 20);
+    ɵɵelement(6, "fn-icon", 7);
     ɵɵelementEnd()();
-    ɵɵelementStart(7, "div", 23);
-    ɵɵelement(8, "div", 24);
+    ɵɵelementStart(7, "div", 21);
+    ɵɵelement(8, "div", 22);
     ɵɵelementEnd()();
   }
   if (rf & 2) {
@@ -364,10 +361,10 @@ function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 7)(1, "div", 8);
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_2_Template, 1, 4, "fn-icon", 9)(3, FNInput_Conditional_0_Case_4_Conditional_3_Template, 2, 7, "span", 10);
+    ɵɵelementStart(0, "div", 5)(1, "div", 6);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_4_Conditional_2_Template, 1, 4, "fn-icon", 7)(3, FNInput_Conditional_0_Case_4_Conditional_3_Template, 2, 7, "span", 8);
     ɵɵelementEnd();
-    ɵɵelementStart(4, "input", 11);
+    ɵɵelementStart(4, "input", 9);
     ɵɵpipe(5, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_4_Template_input_input_4_listener($event) {
       ɵɵrestoreView(_r3);
@@ -383,10 +380,10 @@ function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
       return ɵɵresetView(ctx_r0.handlePasswordBlur($event));
     });
     ɵɵelementEnd();
-    ɵɵelementStart(6, "div", 12);
-    ɵɵtemplate(7, FNInput_Conditional_0_Case_4_Conditional_7_Template, 2, 4, "span", 13)(8, FNInput_Conditional_0_Case_4_Conditional_8_Template, 3, 3)(9, FNInput_Conditional_0_Case_4_Conditional_9_Template, 5, 7);
+    ɵɵelementStart(6, "div", 10);
+    ɵɵtemplate(7, FNInput_Conditional_0_Case_4_Conditional_7_Template, 2, 4, "span", 11)(8, FNInput_Conditional_0_Case_4_Conditional_8_Template, 3, 3)(9, FNInput_Conditional_0_Case_4_Conditional_9_Template, 5, 7);
     ɵɵelementEnd()();
-    ɵɵtemplate(10, FNInput_Conditional_0_Case_4_Conditional_10_Template, 9, 15, "div", 14);
+    ɵɵtemplate(10, FNInput_Conditional_0_Case_4_Conditional_10_Template, 9, 15, "div", 12);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(2);
@@ -404,7 +401,7 @@ function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 9);
+    ɵɵelement(0, "fn-icon", 7);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -414,7 +411,7 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template(rf, c
 function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r11 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 15);
+    ɵɵelementStart(0, "span", 13);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r11);
       const ctx_r0 = ɵɵnextContext(4);
@@ -438,8 +435,8 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template(rf, c
 }
 function FNInput_Conditional_0_Case_5_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 8);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 9)(2, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template, 2, 7, "span", 10);
+    ɵɵelementStart(0, "div", 6);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 7)(2, FNInput_Conditional_0_Case_5_Conditional_1_Conditional_2_Template, 2, 7, "span", 8);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -453,9 +450,9 @@ function FNInput_Conditional_0_Case_5_Conditional_1_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 7);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Template, 3, 2, "div", 8);
-    ɵɵelementStart(2, "input", 25);
+    ɵɵelementStart(0, "div", 5);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Template, 3, 2, "div", 6);
+    ɵɵelementStart(2, "input", 23);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_5_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r10);
@@ -490,7 +487,7 @@ function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 9);
+    ɵɵelement(0, "fn-icon", 7);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -500,7 +497,7 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template(rf, c
 function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 15);
+    ɵɵelementStart(0, "span", 13);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r13);
       const ctx_r0 = ɵɵnextContext(4);
@@ -524,8 +521,8 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 8);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 9)(2, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template, 2, 7, "span", 10);
+    ɵɵelementStart(0, "div", 6);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template, 1, 4, "fn-icon", 7)(2, FNInput_Conditional_0_Case_6_Conditional_1_Conditional_2_Template, 2, 7, "span", 8);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -539,7 +536,7 @@ function FNInput_Conditional_0_Case_6_Conditional_1_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template_span_click_0_listener() {
       ɵɵrestoreView(_r15);
       const ctx_r0 = ɵɵnextContext(4);
@@ -549,7 +546,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, c
       const ctx_r0 = ɵɵnextContext(4);
       return ɵɵresetView(ctx_r0.field.onGenerateKey && ctx_r0.field.onGenerateKey());
     });
-    ɵɵelement(1, "fn-icon", 17);
+    ɵɵelement(1, "fn-icon", 15);
     ɵɵelementEnd();
   }
   if (rf & 2) {
@@ -560,7 +557,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template(rf, c
 function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r14 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 16);
+    ɵɵelementStart(0, "span", 14);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_5_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r14);
       const ctx_r0 = ɵɵnextContext(3);
@@ -570,9 +567,9 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
       const ctx_r0 = ɵɵnextContext(3);
       return ɵɵresetView(ctx_r0.copyText($event));
     });
-    ɵɵelement(1, "fn-icon", 17);
+    ɵɵelement(1, "fn-icon", 15);
     ɵɵelementEnd();
-    ɵɵtemplate(2, FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template, 2, 2, "span", 13);
+    ɵɵtemplate(2, FNInput_Conditional_0_Case_6_Conditional_5_Conditional_2_Template, 2, 2, "span", 11);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -585,7 +582,7 @@ function FNInput_Conditional_0_Case_6_Conditional_5_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r16 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 15);
+    ɵɵelementStart(0, "span", 13);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template_span_click_0_listener($event) {
       ɵɵrestoreView(_r16);
       const ctx_r0 = ɵɵnextContext(4);
@@ -609,7 +606,7 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelement(0, "fn-icon", 9);
+    ɵɵelement(0, "fn-icon", 7);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(4);
@@ -618,7 +615,7 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template(rf, c
 }
 function FNInput_Conditional_0_Case_6_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵtemplate(0, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template, 2, 7, "span", 10)(1, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template, 1, 4, "fn-icon", 9);
+    ɵɵtemplate(0, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_0_Template, 2, 7, "span", 8)(1, FNInput_Conditional_0_Case_6_Conditional_6_Conditional_1_Template, 1, 4, "fn-icon", 7);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -630,9 +627,9 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 26);
-    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Template, 3, 2, "div", 8);
-    ɵɵelementStart(2, "input", 27);
+    ɵɵelementStart(0, "div", 24);
+    ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Template, 3, 2, "div", 6);
+    ɵɵelementStart(2, "input", 25);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_6_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r12);
@@ -648,7 +645,7 @@ function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
       return ɵɵresetView(ctx_r0.onFocus());
     });
     ɵɵelementEnd();
-    ɵɵelementStart(4, "div", 12);
+    ɵɵelementStart(4, "div", 10);
     ɵɵtemplate(5, FNInput_Conditional_0_Case_6_Conditional_5_Template, 3, 3)(6, FNInput_Conditional_0_Case_6_Conditional_6_Template, 2, 2);
     ɵɵelementEnd()();
   }
@@ -666,7 +663,7 @@ function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 3)(1, "span", 28);
+    ɵɵelementStart(0, "div", 3)(1, "span", 26);
     ɵɵtext(2);
     ɵɵpipe(3, "translate");
     ɵɵelementEnd()();
@@ -679,38 +676,6 @@ function FNInput_Conditional_0_Conditional_7_Template(rf, ctx) {
     ɵɵtextInterpolate1(" ", ɵɵpipeBind1(3, 2, ctx_r0.getFieldMessage()), " ");
   }
 }
-function FNInput_Conditional_0_For_10_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r17 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div")(1, "span", 29);
-    ɵɵelement(2, "fn-icon", 9);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "div", 30)(4, "span", 31);
-    ɵɵtext(5);
-    ɵɵpipe(6, "translate");
-    ɵɵelementEnd()();
-    ɵɵelementStart(7, "button", 32);
-    ɵɵlistener("click", function FNInput_Conditional_0_For_10_Template_button_click_7_listener() {
-      const toast_r18 = ɵɵrestoreView(_r17).$implicit;
-      const ctx_r0 = ɵɵnextContext(2);
-      return ɵɵresetView(ctx_r0.removeToast(toast_r18.id));
-    });
-    ɵɵelement(8, "fn-icon", 9);
-    ɵɵelementEnd()();
-  }
-  if (rf & 2) {
-    const toast_r18 = ctx.$implicit;
-    const ctx_r0 = ɵɵnextContext(2);
-    ɵɵclassMapInterpolate1("toast toast-", toast_r18.type, "");
-    ɵɵclassProp("toast-enter", toast_r18.isVisible);
-    ɵɵadvance(2);
-    ɵɵproperty("name", ctx_r0.getToastIconName(toast_r18))("variant", "Colour")("size", "medium")("color", toast_r18.type === "success" ? "#6cc24a" : toast_r18.type === "warn" ? "#ff9f00" : toast_r18.type === "error" ? "#ef3e42" : "#03182b");
-    ɵɵadvance(3);
-    ɵɵtextInterpolate1(" ", ɵɵpipeBind1(6, 14, ctx_r0.getTranslatedMessage(toast_r18.message)), " ");
-    ɵɵadvance(3);
-    ɵɵproperty("name", "cross")("variant", "Line")("size", "medium")("color", "#ffffff");
-  }
-}
 function FNInput_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     ɵɵelementStart(0, "div", 1);
@@ -720,9 +685,7 @@ function FNInput_Conditional_0_Template(rf, ctx) {
     ɵɵelementContainerEnd();
     ɵɵtemplate(7, FNInput_Conditional_0_Conditional_7_Template, 4, 7, "div", 3);
     ɵɵelementEnd();
-    ɵɵelementStart(8, "div", 4);
-    ɵɵrepeaterCreate(9, FNInput_Conditional_0_For_10_Template, 9, 16, "div", 5, _forTrack0);
-    ɵɵelementEnd();
+    ɵɵelement(8, "fn-toast");
   }
   if (rf & 2) {
     let tmp_2_0;
@@ -733,8 +696,6 @@ function FNInput_Conditional_0_Template(rf, ctx) {
     ɵɵconditional(3, (tmp_2_0 = ctx_r0.field.type) === "textarea" ? 3 : tmp_2_0 === "password" ? 4 : tmp_2_0 === "number" ? 5 : 6);
     ɵɵadvance(4);
     ɵɵconditional(7, ctx_r0.showFormFieldMessage(ctx_r0.control, ctx_r0.helperText) ? 7 : -1);
-    ɵɵadvance(2);
-    ɵɵrepeater(ctx_r0.toasts());
   }
 }
 var FN_TOAST_SERVICE = new InjectionToken("FN_TOAST_SERVICE");
@@ -793,8 +754,7 @@ var FNInput = class _FNInput {
   translateService = inject(TranslateService);
   hasFocus = signal(false);
   textareaElement;
-  // Internal Toast State
-  toasts = signal([]);
+  // Removed local Toast State
   // Removed HttpClient injection
   subs = new Subscription();
   sizeMap = {
@@ -849,7 +809,6 @@ var FNInput = class _FNInput {
     if (this.field.value) this.control.setValue(this.field.value);
     this.setupVisibilityCondition();
     this.setupFieldMessageListener();
-    this.setupToastSubscription();
   }
   ngOnDestroy() {
     this.subs.unsubscribe();
@@ -1605,36 +1564,7 @@ var FNInput = class _FNInput {
     }
     this.cdr.detectChanges();
   }
-  setupToastSubscription() {
-    const service = this.effectiveToastService;
-    if (service) {
-      this.subs.add(service.toasts$.subscribe((toasts) => {
-        this.toasts.set(toasts);
-      }));
-    }
-  }
-  removeToast(id) {
-    this.effectiveToastService?.remove(id);
-  }
-  getTranslatedMessage(message) {
-    if (this.helperHandle && typeof this.helperHandle.translate === "function") {
-      return this.helperHandle.translate(message);
-    }
-    return message;
-  }
-  getToastIconName(toast) {
-    switch (toast.type) {
-      case "success":
-        return "check-circle";
-      case "warn":
-      case "info":
-        return "info-circle";
-      case "error":
-        return "exclamation-circle";
-      default:
-        return "info-circle";
-    }
-  }
+  // Removed local toast helpers
   showFormFieldMessage(control, helperText) {
     if (this.helperHandle) {
       return this.helperHandle.showFormFieldMessage(control, helperText);
@@ -1711,17 +1641,17 @@ var FNInput = class _FNInput {
     features: [ɵɵStandaloneFeature],
     decls: 1,
     vars: 1,
-    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "color", "variant", "statusLabel"], [1, "fn-field-message-container"], [1, "toast-container"], [3, "class", "toast-enter"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "cursor-pointer", 3, "ngClass"], [1, "cursor-pointer", 3, "click", "keydown", "ngClass"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"], [1, "fn-field-message-text", 3, "ngClass"], [1, "toast-icon"], [1, "toast-content"], [1, "toast-message"], ["aria-label", "Close", 1, "toast-close", 3, "click"]],
+    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "color", "variant", "statusLabel"], [1, "fn-field-message-container"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "cursor-pointer", 3, "ngClass"], [1, "cursor-pointer", 3, "click", "keydown", "ngClass"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"], [1, "fn-field-message-text", 3, "ngClass"]],
     template: function FNInput_Template(rf, ctx) {
       if (rf & 1) {
-        ɵɵtemplate(0, FNInput_Conditional_0_Template, 11, 3);
+        ɵɵtemplate(0, FNInput_Conditional_0_Template, 9, 3);
       }
       if (rf & 2) {
         ɵɵconditional(0, ctx.field.name && ctx.isVisible() && !ctx.field.hidden ? 0 : -1);
       }
     },
-    dependencies: [FormsModule, DefaultValueAccessor, NgControlStatus, RequiredValidator, CommonModule, NgClass, NgStyle, ReactiveFormsModule, FormControlDirective, TranslateModule, TranslatePipe, FNLabel, FNIconComponent],
-    styles: [".fn-input-container[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%}.fn-label[_ngcontent-%COMP%]{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label[_ngcontent-%COMP%]   span[_ngcontent-%COMP%]{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field[_ngcontent-%COMP%]{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field[_ngcontent-%COMP%]::placeholder{color:#c4cdd2}.fn-input-field[_ngcontent-%COMP%]:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error[_ngcontent-%COMP%]{border-bottom-color:#ef3e42}.fn-input-field.success[_ngcontent-%COMP%]{border-bottom-color:#6cc24a}.fn-input-field.disabled[_ngcontent-%COMP%]{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10[_ngcontent-%COMP%]{padding-left:40px!important}.fn-input-field.has-prefix-text[_ngcontent-%COMP%]{padding-left:100px!important}.fn-input-field.pr-10[_ngcontent-%COMP%]{padding-right:40px!important}.fn-input-field.has-suffix-text[_ngcontent-%COMP%]{padding-right:120px!important}.fn-input-field.pr-12[_ngcontent-%COMP%]{padding-right:44px!important}.fn-input-field.pr-20[_ngcontent-%COMP%]{padding-right:72px!important}.fn-input-field.pr-24[_ngcontent-%COMP%]{padding-right:88px!important}.fn-input-field.pr-30[_ngcontent-%COMP%]{padding-right:104px!important}.fn-input-field.pr-32[_ngcontent-%COMP%]{padding-right:120px!important}.fn-field-message-container[_ngcontent-%COMP%]{margin-top:4px}.fn-field-message-text[_ngcontent-%COMP%]{font-family:Outfit,sans-serif;font-size:12px;color:#c4cdd2}.fn-field-message-text.error[_ngcontent-%COMP%]{color:#ef3e42}.fn-field-message-text.success[_ngcontent-%COMP%]{color:#6cc24a}.icon-container[_ngcontent-%COMP%]{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative[_ngcontent-%COMP%]{position:relative}.absolute[_ngcontent-%COMP%]{position:absolute}.right-0[_ngcontent-%COMP%]{right:0}.left-0[_ngcontent-%COMP%]{left:0}.top-1\\/2[_ngcontent-%COMP%]{top:50%}.-translate-y-1\\/2[_ngcontent-%COMP%]{transform:translateY(-50%)}.flex[_ngcontent-%COMP%]{display:flex}.items-center[_ngcontent-%COMP%]{align-items:center}.justify-between[_ngcontent-%COMP%]{justify-content:space-between}.gap-1[_ngcontent-%COMP%]{gap:.25rem}.gap-2[_ngcontent-%COMP%]{gap:.5rem}.pr-3[_ngcontent-%COMP%]{padding-right:.75rem}.pl-3[_ngcontent-%COMP%]{padding-left:.75rem}.mt-2[_ngcontent-%COMP%]{margin-top:.5rem}.space-y-1[_ngcontent-%COMP%] > [_ngcontent-%COMP%]:not([hidden]) ~ [_ngcontent-%COMP%]:not([hidden]){margin-top:.25rem}.text-xs[_ngcontent-%COMP%]{font-size:.75rem}.font-medium[_ngcontent-%COMP%]{font-weight:500}.h-1\\.5[_ngcontent-%COMP%]{height:.375rem}.w-full[_ngcontent-%COMP%]{width:100%}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:#eef0f2}.rounded-full[_ngcontent-%COMP%]{border-radius:9999px}.overflow-hidden[_ngcontent-%COMP%]{overflow:hidden}.transition-all[_ngcontent-%COMP%]{transition-property:all}.duration-300[_ngcontent-%COMP%]{transition-duration:.3s}.cursor-pointer[_ngcontent-%COMP%]{cursor:pointer}.opacity-50[_ngcontent-%COMP%]{opacity:.5}.cursor-not-allowed[_ngcontent-%COMP%]{cursor:not-allowed}.text-ellipsis[_ngcontent-%COMP%]{text-overflow:ellipsis}.whitespace-nowrap[_ngcontent-%COMP%]{white-space:nowrap}.toast-container[_ngcontent-%COMP%]{position:fixed;top:24px;left:50%;transform:translate(-50%);z-index:9999;width:100%;max-width:336px;display:flex;flex-direction:column;gap:8px;pointer-events:none}.toast[_ngcontent-%COMP%]{display:flex;align-items:center;background:#25333f;border-radius:8px;padding:12px;width:336px;max-width:100%;opacity:0;transform:translateY(-20px);transition:all .3s cubic-bezier(.4,0,.2,1);pointer-events:auto}.toast.toast-enter[_ngcontent-%COMP%]{opacity:1;transform:translateY(0)}.toast.toast-success[_ngcontent-%COMP%]{border-left:4px solid #6cc24a}.toast.toast-warn[_ngcontent-%COMP%]{border-left:4px solid #ff9f00}.toast.toast-error[_ngcontent-%COMP%]{border-left:4px solid #ef3e42}.toast.toast-info[_ngcontent-%COMP%]{border-left:4px solid #3b82f6}.toast[_ngcontent-%COMP%]   .toast-icon[_ngcontent-%COMP%]{width:24px;height:24px;display:flex;align-items:center;justify-content:center;margin-right:8px;flex-shrink:0}.toast[_ngcontent-%COMP%]   .toast-content[_ngcontent-%COMP%]{flex:1;min-width:0}.toast[_ngcontent-%COMP%]   .toast-message[_ngcontent-%COMP%]{font-size:14px;line-height:20px;color:#fff;display:block}.toast[_ngcontent-%COMP%]   .toast-close[_ngcontent-%COMP%]{background:none;border:none;font-size:20px;color:#fff;opacity:.7;cursor:pointer;padding:0;margin-left:8px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .2s;pointer-events:auto}.toast[_ngcontent-%COMP%]   .toast-close[_ngcontent-%COMP%]:hover{opacity:1}"],
+    dependencies: [FormsModule, DefaultValueAccessor, NgControlStatus, RequiredValidator, CommonModule, NgClass, NgStyle, ReactiveFormsModule, FormControlDirective, TranslateModule, TranslatePipe, FNLabel, FNIconComponent, FNToast],
+    styles: [".fn-input-container[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%}.fn-label[_ngcontent-%COMP%]{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label[_ngcontent-%COMP%]   span[_ngcontent-%COMP%]{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field[_ngcontent-%COMP%]{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field[_ngcontent-%COMP%]::placeholder{color:#c4cdd2}.fn-input-field[_ngcontent-%COMP%]:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error[_ngcontent-%COMP%]{border-bottom-color:#ef3e42}.fn-input-field.success[_ngcontent-%COMP%]{border-bottom-color:#6cc24a}.fn-input-field.disabled[_ngcontent-%COMP%]{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10[_ngcontent-%COMP%]{padding-left:40px!important}.fn-input-field.has-prefix-text[_ngcontent-%COMP%]{padding-left:100px!important}.fn-input-field.pr-10[_ngcontent-%COMP%]{padding-right:40px!important}.fn-input-field.has-suffix-text[_ngcontent-%COMP%]{padding-right:120px!important}.fn-input-field.pr-12[_ngcontent-%COMP%]{padding-right:44px!important}.fn-input-field.pr-20[_ngcontent-%COMP%]{padding-right:72px!important}.fn-input-field.pr-24[_ngcontent-%COMP%]{padding-right:88px!important}.fn-input-field.pr-30[_ngcontent-%COMP%]{padding-right:104px!important}.fn-input-field.pr-32[_ngcontent-%COMP%]{padding-right:120px!important}.fn-field-message-container[_ngcontent-%COMP%]{margin-top:4px}.fn-field-message-text[_ngcontent-%COMP%]{font-family:Outfit,sans-serif;font-size:12px;color:#c4cdd2}.fn-field-message-text.error[_ngcontent-%COMP%]{color:#ef3e42}.fn-field-message-text.success[_ngcontent-%COMP%]{color:#6cc24a}.icon-container[_ngcontent-%COMP%]{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative[_ngcontent-%COMP%]{position:relative}.absolute[_ngcontent-%COMP%]{position:absolute}.right-0[_ngcontent-%COMP%]{right:0}.left-0[_ngcontent-%COMP%]{left:0}.top-1\\/2[_ngcontent-%COMP%]{top:50%}.-translate-y-1\\/2[_ngcontent-%COMP%]{transform:translateY(-50%)}.flex[_ngcontent-%COMP%]{display:flex}.items-center[_ngcontent-%COMP%]{align-items:center}.justify-between[_ngcontent-%COMP%]{justify-content:space-between}.gap-1[_ngcontent-%COMP%]{gap:.25rem}.gap-2[_ngcontent-%COMP%]{gap:.5rem}.pr-3[_ngcontent-%COMP%]{padding-right:.75rem}.pl-3[_ngcontent-%COMP%]{padding-left:.75rem}.mt-2[_ngcontent-%COMP%]{margin-top:.5rem}.space-y-1[_ngcontent-%COMP%] > [_ngcontent-%COMP%]:not([hidden]) ~ [_ngcontent-%COMP%]:not([hidden]){margin-top:.25rem}.text-xs[_ngcontent-%COMP%]{font-size:.75rem}.font-medium[_ngcontent-%COMP%]{font-weight:500}.h-1\\.5[_ngcontent-%COMP%]{height:.375rem}.w-full[_ngcontent-%COMP%]{width:100%}.bg-\\__ph-0__[_ngcontent-%COMP%]{background-color:#eef0f2}.rounded-full[_ngcontent-%COMP%]{border-radius:9999px}.overflow-hidden[_ngcontent-%COMP%]{overflow:hidden}.transition-all[_ngcontent-%COMP%]{transition-property:all}.duration-300[_ngcontent-%COMP%]{transition-duration:.3s}.cursor-pointer[_ngcontent-%COMP%]{cursor:pointer}.opacity-50[_ngcontent-%COMP%]{opacity:.5}.cursor-not-allowed[_ngcontent-%COMP%]{cursor:not-allowed}.text-ellipsis[_ngcontent-%COMP%]{text-overflow:ellipsis}.whitespace-nowrap[_ngcontent-%COMP%]{white-space:nowrap}"],
     changeDetection: 0
   });
 };
@@ -1731,7 +1661,7 @@ var FNInput = class _FNInput {
     args: [{
       selector: "fn-input",
       standalone: true,
-      imports: [FormsModule, CommonModule, ReactiveFormsModule, TranslateModule, FNLabel, FNIconComponent],
+      imports: [FormsModule, CommonModule, ReactiveFormsModule, TranslateModule, FNLabel, FNIconComponent, FNToast],
       changeDetection: ChangeDetectionStrategy.OnPush,
       template: `@if (field.name && isVisible() && !field.hidden) {\r
   <div class="fn-input-container">\r
@@ -2139,44 +2069,10 @@ var FNInput = class _FNInput {
   </div>\r
 \r
   <!-- Integrated Toast Notifications -->\r
-  <div class="toast-container">\r
-    @for (toast of toasts(); track toast.id) {\r
-      <div class="toast toast-{{ toast.type }}" [class.toast-enter]="toast.isVisible">\r
-        <span class="toast-icon">\r
-          <fn-icon\r
-            [name]="getToastIconName(toast)"\r
-            [variant]="'Colour'"\r
-            [size]="'medium'"\r
-            [color]="\r
-              toast.type === 'success'\r
-                ? '#6cc24a'\r
-                : toast.type === 'warn'\r
-                  ? '#ff9f00'\r
-                  : toast.type === 'error'\r
-                    ? '#ef3e42'\r
-                    : '#03182b'\r
-            "\r
-          ></fn-icon>\r
-        </span>\r
-        <div class="toast-content">\r
-          <span class="toast-message">\r
-            {{ getTranslatedMessage(toast.message) | translate }}\r
-          </span>\r
-        </div>\r
-        <button class="toast-close" (click)="removeToast(toast.id)" aria-label="Close">\r
-          <fn-icon\r
-            [name]="'cross'"\r
-            [variant]="'Line'"\r
-            [size]="'medium'"\r
-            [color]="'#ffffff'"\r
-          ></fn-icon>\r
-        </button>\r
-      </div>\r
-    }\r
-  </div>\r
+  <fn-toast></fn-toast>\r
 }\r
 `,
-      styles: [".fn-input-container{display:flex;flex-direction:column;width:100%}.fn-label{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label span{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field::placeholder{color:#c4cdd2}.fn-input-field:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error{border-bottom-color:#ef3e42}.fn-input-field.success{border-bottom-color:#6cc24a}.fn-input-field.disabled{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10{padding-left:40px!important}.fn-input-field.has-prefix-text{padding-left:100px!important}.fn-input-field.pr-10{padding-right:40px!important}.fn-input-field.has-suffix-text{padding-right:120px!important}.fn-input-field.pr-12{padding-right:44px!important}.fn-input-field.pr-20{padding-right:72px!important}.fn-input-field.pr-24{padding-right:88px!important}.fn-input-field.pr-30{padding-right:104px!important}.fn-input-field.pr-32{padding-right:120px!important}.fn-field-message-container{margin-top:4px}.fn-field-message-text{font-family:Outfit,sans-serif;font-size:12px;color:#c4cdd2}.fn-field-message-text.error{color:#ef3e42}.fn-field-message-text.success{color:#6cc24a}.icon-container{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative{position:relative}.absolute{position:absolute}.right-0{right:0}.left-0{left:0}.top-1\\/2{top:50%}.-translate-y-1\\/2{transform:translateY(-50%)}.flex{display:flex}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.pr-3{padding-right:.75rem}.pl-3{padding-left:.75rem}.mt-2{margin-top:.5rem}.space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}.text-xs{font-size:.75rem}.font-medium{font-weight:500}.h-1\\.5{height:.375rem}.w-full{width:100%}.bg-\\[\\#eef0f2\\]{background-color:#eef0f2}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.transition-all{transition-property:all}.duration-300{transition-duration:.3s}.cursor-pointer{cursor:pointer}.opacity-50{opacity:.5}.cursor-not-allowed{cursor:not-allowed}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}.toast-container{position:fixed;top:24px;left:50%;transform:translate(-50%);z-index:9999;width:100%;max-width:336px;display:flex;flex-direction:column;gap:8px;pointer-events:none}.toast{display:flex;align-items:center;background:#25333f;border-radius:8px;padding:12px;width:336px;max-width:100%;opacity:0;transform:translateY(-20px);transition:all .3s cubic-bezier(.4,0,.2,1);pointer-events:auto}.toast.toast-enter{opacity:1;transform:translateY(0)}.toast.toast-success{border-left:4px solid #6cc24a}.toast.toast-warn{border-left:4px solid #ff9f00}.toast.toast-error{border-left:4px solid #ef3e42}.toast.toast-info{border-left:4px solid #3b82f6}.toast .toast-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;margin-right:8px;flex-shrink:0}.toast .toast-content{flex:1;min-width:0}.toast .toast-message{font-size:14px;line-height:20px;color:#fff;display:block}.toast .toast-close{background:none;border:none;font-size:20px;color:#fff;opacity:.7;cursor:pointer;padding:0;margin-left:8px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .2s;pointer-events:auto}.toast .toast-close:hover{opacity:1}\n"]
+      styles: [".fn-input-container{display:flex;flex-direction:column;width:100%}.fn-label{font-family:Outfit,sans-serif;font-weight:500;margin-bottom:8px;display:flex;align-items:center}.fn-label span{color:#c4cdd2;font-size:14px;font-weight:400}.fn-input-field{width:100%;height:48px;padding:0 16px;background-color:#f7f8f9;border-bottom:1.5px solid #c4cdd2;font-family:Outfit,sans-serif;font-size:16px;color:#03182b;transition:all .2s ease;border-radius:4px 4px 0 0}.fn-input-field::placeholder{color:#c4cdd2}.fn-input-field:focus{outline:none;background-color:#fff;border-bottom-color:#03182b}.fn-input-field.error{border-bottom-color:#ef3e42}.fn-input-field.success{border-bottom-color:#6cc24a}.fn-input-field.disabled{background-color:#eef0f2;color:#c4cdd2;cursor:not-allowed}.fn-input-field.pl-10{padding-left:40px!important}.fn-input-field.has-prefix-text{padding-left:100px!important}.fn-input-field.pr-10{padding-right:40px!important}.fn-input-field.has-suffix-text{padding-right:120px!important}.fn-input-field.pr-12{padding-right:44px!important}.fn-input-field.pr-20{padding-right:72px!important}.fn-input-field.pr-24{padding-right:88px!important}.fn-input-field.pr-30{padding-right:104px!important}.fn-input-field.pr-32{padding-right:120px!important}.fn-field-message-container{margin-top:4px}.fn-field-message-text{font-family:Outfit,sans-serif;font-size:12px;color:#c4cdd2}.fn-field-message-text.error{color:#ef3e42}.fn-field-message-text.success{color:#6cc24a}.icon-container{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px}.relative{position:relative}.absolute{position:absolute}.right-0{right:0}.left-0{left:0}.top-1\\/2{top:50%}.-translate-y-1\\/2{transform:translateY(-50%)}.flex{display:flex}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.pr-3{padding-right:.75rem}.pl-3{padding-left:.75rem}.mt-2{margin-top:.5rem}.space-y-1>:not([hidden])~:not([hidden]){margin-top:.25rem}.text-xs{font-size:.75rem}.font-medium{font-weight:500}.h-1\\.5{height:.375rem}.w-full{width:100%}.bg-\\[\\#eef0f2\\]{background-color:#eef0f2}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.transition-all{transition-property:all}.duration-300{transition-duration:.3s}.cursor-pointer{cursor:pointer}.opacity-50{opacity:.5}.cursor-not-allowed{cursor:not-allowed}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}\n"]
     }]
   }], () => [{
     type: ChangeDetectorRef

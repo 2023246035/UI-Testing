@@ -1,11 +1,11 @@
 import {
-  TranslateModule,
-  TranslateService
-} from "./chunk-JZDDGXGG.js";
-import {
   CommonModule,
   NgClass
 } from "./chunk-3PIUJSML.js";
+import {
+  TranslateModule,
+  TranslateService
+} from "./chunk-JZDDGXGG.js";
 import {
   Component,
   Input,
@@ -215,4 +215,4 @@ var FNLabel = class _FNLabel {
 export {
   FNLabel
 };
-//# sourceMappingURL=chunk-ENHLTDN7.js.map
+//# sourceMappingURL=chunk-F7OTGTJ5.js.map
