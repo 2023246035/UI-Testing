@@ -1,13 +1,13 @@
 import {
   FNLabel
-} from "./chunk-ENHLTDN7.js";
+} from "./chunk-F7OTGTJ5.js";
+import {
+  CommonModule
+} from "./chunk-3PIUJSML.js";
 import {
   TranslateModule,
   TranslateService
 } from "./chunk-JZDDGXGG.js";
-import {
-  CommonModule
-} from "./chunk-3PIUJSML.js";
 import {
   ChangeDetectorRef,
   Component,
@@ -151,4 +151,4 @@ var FNFieldMessage = class _FNFieldMessage {
 export {
   FNFieldMessage
 };
-//# sourceMappingURL=chunk-RNMJJGDO.js.map
+//# sourceMappingURL=chunk-QPERKEQ5.js.map

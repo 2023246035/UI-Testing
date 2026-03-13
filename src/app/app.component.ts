@@ -1,17 +1,16 @@
-import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FNLabel } from "fn-label";
-import { FNInput, FNInputBase } from "fn-input";
-import { TranslateModule } from "@ngx-translate/core";
+import { Component, inject} from "@angular/core";
 import {
-  ReactiveFormsModule,
   FormBuilder,
   FormGroup,
+  ReactiveFormsModule,
   Validators,
 } from "@angular/forms";
-import { inject } from "@angular/core";
-import { FNToast, ToastService } from "fn-toast";
+import { TranslateModule } from "@ngx-translate/core";
 import { FNFieldMessage } from "fn-field-message";
+import { FNInput, FNInputBase } from "fn-input";
+import { FNLabel } from "fn-label";
+import { FNToast, ToastService } from "fn-toast";
 
 @Component({
   selector: "app-root",
@@ -25,206 +24,331 @@ import { FNFieldMessage } from "fn-field-message";
     FNToast,
     FNFieldMessage,
   ],
-  providers: [],
   templateUrl: "./app.component.html",
   styles: [
     `
-      :host ::ng-deep fn-label .fn-label {
+      :host ::ng-deep .fn-label {
         width: 100%;
       }
-      :host ::ng-deep .cursor-not-allowed {
-        cursor: pointer !important;
-        opacity: 1 !important;
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.3s ease;
+        opacity: 0;
+      }
+      .accordion-content.expanded {
+        max-height: 5000px;
+        opacity: 1;
+        margin-top: 2rem;
+      }
+      .chevron-icon {
+        transition: transform 0.3s ease;
+      }
+      .chevron-icon.rotated {
+        transform: rotate(180deg);
       }
     `,
   ],
 })
 export class AppComponent {
-  title = "Component Showcase";
+  title = "FN Component Library - Deep Prop Integration";
   form: FormGroup;
+  activeSection: string | null = "fundamentals";
+
   private readonly fb = inject(FormBuilder);
   public toastService = inject(ToastService);
 
-  // --- FN-LABEL VARIETIES ---
-  labelBasic = { label: "Standard Label" };
-  labelRequired = { label: "Required Field", required: true };
-  labelCustomStyle = {
-    label: "Custom Styled Label",
-    color: "#e11d48",
-    labelSize: "18px",
-    fontWeight: "bold",
-  };
-  labelWithHelper = {
-    label: "Label with Helper",
-    helperText: "This provides additional context.",
-  };
+  toggleSection(section: string) {
+    this.activeSection = this.activeSection === section ? null : section;
+  }
 
-  // --- FN-INPUT VARIETIES ---
+  // ==========================================
+  // 1. FN-LABEL EXHAUSTIVE VARIETIES (Deep)
+  // ==========================================
+  typographyVariants: any[] = [
+    "h1",
+    "h1Bold",
+    "h2",
+    "h2Bold",
+    "h3",
+    "h3Bold",
+    "p1",
+    "p1Bold",
+    "p2",
+    "p2Bold",
+    "p3",
+    "p3Bold",
+    "p4",
+    "p4Bold",
+    "interactionLarge",
+    "interactionLargeBold",
+    "interactionMedium",
+    "interactionMediumBold",
+    "interactionSmall",
+    "interactionSmallBold",
+    "avatarLabel",
+  ];
 
-  // 1. Text Inputs
-  textBasic: FNInputBase = {
+  statusLabels: any[] = [
+    "Standard",
+    "Success",
+    "Hot",
+    "Warning",
+    "Disabled",
+    "RHBPremierBanking",
+  ];
+
+  // ==========================================
+  // 2. DEEP PROP INTEGRATION - INPUT VARIETIES
+  // ==========================================
+
+  // --- Group 1: Fundamentals & Visibility ---
+  fundBasic: FNInputBase = {
     fieldType: "FNInput",
     type: "text",
-    name: "textBasic",
-    label: "Basic Text Input",
-    placeholder: "Type something...",
+    name: "basic",
+    label: "Basic Input",
+  };
+  fundRequired: FNInputBase = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "required",
+    label: "Required Field",
     required: true,
+    hideOptional: true,
   };
 
-  textWithIcons: FNInputBase = {
+  // Visibility Demo
+  visibilityTrigger: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "textIcons",
-    label: "Input with Affixes",
-    prefix: { icon: "home" },
-    suffix: { text: ".com" },
+    name: "trigger",
+    label: "Toggle Next Field",
+    placeholder: "Type 'show' to reveal...",
   };
-
-  textFloatIn: FNInputBase = {
+  visibilityControlled: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "textFloatIn",
-    label: "Float Label: In",
-    floatLabelVariant: "in",
+    name: "dependent",
+    label: "I am Conditional",
+    visibilityCondition: { dependsOn: "trigger", showWhen: "show" },
   };
 
-  textFloatOver: FNInputBase = {
+  // --- Group 2: The Affix & Icon Variant Lab ---
+  iconLine: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "textFloatOver",
-    label: "Float Label: Over",
-    floatLabelVariant: "over",
+    name: "iconLine",
+    label: "Line Icon",
+    icon: { name: "home", variant: "Line", size: 24 },
   };
-
-  // 1.1 New 0.0.18 Features
-  addressInput: FNInputBase = {
+  iconFill: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "address",
-    label: "Address (Alphanumeric + Symbols)",
-    isAlphanumeric: true,
-    isAddressLine: true,
-    placeholder: "Allows ( ) / , and alphanumeric",
+    name: "iconFill",
+    label: "Fill Icon",
+    icon: { name: "home", variant: "Fill", size: 24 },
   };
-
-  statusSuccessInput: FNInputBase = {
+  iconDuotone: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "statusSuccess",
-    label: "Success Status Label",
-    statusLabel: "Success",
-    value: "Positive State",
+    name: "iconDuotone",
+    label: "Duotone Icon",
+    icon: { name: "home", variant: "Duotone", size: 24 },
   };
-
-  statusWarningInput: FNInputBase = {
+  prefixAction: any = {
     fieldType: "FNInput",
     type: "text",
-    name: "statusWarning",
-    label: "Warning Status Label",
-    statusLabel: "Warning",
-    value: "Check this field",
+    name: "prefixAction",
+    label: "Reactive Prefix",
+    prefix: {
+      text: "Search",
+      onClick: () => this.toastService.info("Prefix Action triggered!"),
+    },
   };
 
-  // 2. Password Inputs
-  passwordSecure: FNInputBase = {
+  // --- Group 3: The Security Vault (Password Props) ---
+  passStrength: any = {
     fieldType: "FNInput",
     type: "password",
-    name: "passwordSecure",
-    label: "Secure Password",
+    name: "pStrength",
+    label: "High-Security Password",
     toggleMask: true,
     feedback: true,
+    weakLabel: "Vulnerable",
+    mediumLabel: "Sufficient",
+    strongLabel: "Impregnable",
   };
-
-  passwordGenerate: any = {
+  passGenerator: any = {
     fieldType: "FNInput",
     type: "password",
-    name: "passwordGenerate",
-    label: "API Key Generator",
-    isCopyText: true,
+    name: "pGen",
+    label: "Enterprise Key Gen",
     hasGenerateKey: true,
+    isCopyText: true,
     toggleMask: true,
     onGenerateKey: () => {
-      const newKey = "key_" + Math.random().toString(36).substring(7);
-      this.form.get("passwordGenerate")?.setValue(newKey);
-      this.toastService.success("New key generated!", "Success");
+      const k = "FN-" + Math.random().toString(36).substring(4).toUpperCase();
+      this.form.get("pGen")?.setValue(k);
+      this.toastService.success("Secure Key Generated");
     },
-    onCopy: () => this.toastService.info("Key copied to clipboard", "Copied"),
   };
 
-  // 3. Number & Currency
-  numberSpinners: FNInputBase = {
+  // --- Group 4: The Data Engine (Numeric Props) ---
+  numStacked: any = {
     fieldType: "FNInput",
     type: "number",
-    name: "numberSpinners",
-    label: "Quantity with Spinners",
+    name: "nStacked",
+    label: "Stacked Layout",
     showButtons: true,
-    min: 0,
-    max: 100,
+    buttonLayout: "stacked",
   };
-
-  currencyInput: FNInputBase = {
+  numHorizontal: any = {
     fieldType: "FNInput",
     type: "number",
-    name: "currencyInput",
-    label: "Price (USD)",
+    name: "nHorizontal",
+    label: "Horizontal Layout",
+    showButtons: true,
+    buttonLayout: "horizontal",
+    incrementButtonIcon: "add",
+    decrementButtonIcon: "remove",
+  };
+  numVertical: any = {
+    fieldType: "FNInput",
+    type: "number",
+    name: "nVertical",
+    label: "Vertical Layout",
+    showButtons: true,
+    buttonLayout: "vertical",
+  };
+  currencyMYR: any = {
+    fieldType: "FNInput",
+    type: "number",
+    name: "cMYR",
+    label: "Currency: MYR (Code)",
     isCurrency: true,
-    currency: "USD",
-    locale: "en-US",
+    currency: "MYR",
+    currencyDisplay: "code",
+    locale: "en-MY",
+  };
+  numPrecision: any = {
+    fieldType: "FNInput",
+    type: "number",
+    name: "nPrecise",
+    label: "Fractional Precision",
+    minFractionDigits: 2,
+    maxFractionDigits: 4,
+    step: 0.01,
+    value: 1.2345,
   };
 
-  // 4. Textarea
-  textareaInput: FNInputBase = {
+  // --- Group 5: Logic & Style Overrides ---
+  logicAddress: any = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "lAddress",
+    label: "Adaptive Address Line",
+    isAlphanumeric: true,
+    isAddressLine: true,
+    placeholder: "Allows / ( ) , symbols",
+  };
+  styleOverride: any = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "sOverride",
+    label: "Deep Style Overrides",
+    labelVariant: "h3Bold",
+    labelSize: "14px",
+    color: "#4f46e5",
+    valueColor: "#059669",
+    valueSize: "18px",
+    value: "Custom Styled Text",
+  };
+  statusSuccess: any = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "sSuccess",
+    label: "Explicit Success",
+    statusLabel: "Success",
+    hasSuccessBorder: true,
+    value: "Verified State",
+  };
+  statusRhb: any = {
+    fieldType: "FNInput",
+    type: "text",
+    name: "sRhb",
+    label: "RHB Premier State",
+    statusLabel: "RHBPremierBanking",
+    value: "Premier Account",
+  };
+
+  // --- Group 6: Textarea & Content ---
+  areaDeep: any = {
     fieldType: "FNInput",
     type: "textarea",
-    name: "description",
-    label: "Long Description",
-    placeholder: "Enter details here...",
-    rows: 4,
+    name: "aDeep",
+    label: "Configurable Textarea",
+    rows: 5,
+    cols: 50,
+    maxLength: 500,
+    helperText: "Max 500 characters allowed.",
   };
 
-  // --- TOAST TRIGGERS ---
-  showSuccess() {
-    this.toastService.success("Operation completed successfully!", "Success");
-  }
-  showError() {
-    this.toastService.error("An unexpected error occurred.", "Error");
-  }
-  showWarn() {
-    this.toastService.warn("Please check your input.", "Warning");
-  }
-  showInfo() {
-    this.toastService.info("This is an informative message.", "Information");
-  }
-
-  // --- FN-FIELD-MESSAGE VARIETIES ---
-  fieldMessageConfig: any = {
-    name: "testField",
-    label: "Field with Validation",
-    helperText: "This is a helper text that appears when no errors exist.",
+  // ==========================================
+  // 3. OTHER COMPONENT DATA
+  // ==========================================
+  standaloneMessage: any = {
+    name: "standalone",
+    label: "Autonomous Validation",
+    helperText: "Reactive to form control state.",
     errors: {
-      required: "This field is absolutely mandatory.",
-      minlength: "Minimum 8 characters please!",
+      required: "Mandatory input required.",
+      min: "Value must exceed threshold.",
     },
   };
 
-  get testControl() {
-    return this.form.get("textBasic") as any;
+  triggerSuccess() {
+    this.toastService.success("Task Synchronized", "Enterprise");
+  }
+  triggerError() {
+    this.toastService.error("System Failure", "Critical");
+  }
+  triggerWarn() {
+    this.toastService.warn("Low Quota", "System");
+  }
+  triggerInfo() {
+    this.toastService.info("Refactor Complete", "Notice");
   }
 
   constructor() {
     this.form = this.fb.group({
-      textBasic: ["", [Validators.required]],
-      textIcons: [""],
-      textFloatIn: [""],
-      textFloatOver: [""],
-      address: [""],
-      statusSuccess: [""],
-      statusWarning: [""],
-      passwordSecure: [""],
-      passwordGenerate: [""],
-      numberSpinners: [5],
-      currencyInput: [99.99],
-      description: [""],
+      basic: ["", [Validators.required]],
+      required: [""],
+      trigger: [""],
+      dependent: [""],
+      iconLine: [""],
+      iconFill: [""],
+      iconDuotone: [""],
+      prefixAction: [""],
+      pStrength: ["", [Validators.minLength(8)]],
+      pGen: [""],
+      nStacked: [10],
+      nHorizontal: [20],
+      nVertical: [30],
+      cMYR: [1500.5],
+      nPrecise: [1.2345],
+      lAddress: [""],
+      sOverride: ["Custom Styled Text"],
+      sSuccess: ["Valid"],
+      sRhb: ["Premier"],
+      aDeep: [""],
+      standaloneControl: ["", [Validators.required]],
     });
+  }
+
+  get standaloneControl() {
+    return this.form.get("standaloneControl") as any;
   }
 }
