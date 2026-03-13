@@ -1,4 +1,9 @@
 import {
+  FNIconComponent,
+  FNToast,
+  ToastService
+} from "./chunk-GPRICQG7.js";
+import {
   DefaultValueAccessor,
   FormControlDirective,
   FormsModule,
@@ -6,18 +11,13 @@ import {
   ReactiveFormsModule,
   RequiredValidator
 } from "./chunk-HAUCSGP4.js";
+import "./chunk-55VUH47M.js";
 import {
   FNFieldMessage
 } from "./chunk-QPERKEQ5.js";
 import {
   FNLabel
 } from "./chunk-F7OTGTJ5.js";
-import {
-  FNIconComponent,
-  FNToast,
-  ToastService
-} from "./chunk-GPRICQG7.js";
-import "./chunk-55VUH47M.js";
 import {
   CommonModule,
   NgClass,
@@ -105,15 +105,12 @@ var _c3 = (a0, a1, a2, a3, a4, a5, a6, a7) => ({
 var _c4 = (a0) => ({
   color: a0
 });
-var _c5 = (a0) => ({
-  "opacity-50 cursor-not-allowed": a0
-});
-var _c6 = (a0, a1, a2) => ({
+var _c5 = (a0, a1, a2) => ({
   "bg-[#ef3e42]": a0,
   "bg-[#ff9f00]": a1,
   "bg-[#6cc24a]": a2
 });
-var _c7 = (a0, a1, a2, a3, a4, a5, a6, a7) => ({
+var _c6 = (a0, a1, a2, a3, a4, a5, a6, a7) => ({
   disabled: a0,
   error: a1,
   success: a2,
@@ -123,7 +120,7 @@ var _c7 = (a0, a1, a2, a3, a4, a5, a6, a7) => ({
   "has-suffix-text": a6,
   "text-[24px] font-bold": a7
 });
-var _c8 = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => ({
+var _c7 = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => ({
   disabled: a0,
   error: a1,
   success: a2,
@@ -275,7 +272,7 @@ function FNInput_Conditional_0_Case_4_Conditional_8_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "span", 18);
+    ɵɵelementStart(0, "span", 15);
     ɵɵlistener("click", function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template_span_click_0_listener() {
       ɵɵrestoreView(_r9);
       const ctx_r0 = ɵɵnextContext(4);
@@ -289,8 +286,6 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template(rf, c
     ɵɵelementEnd();
   }
   if (rf & 2) {
-    const ctx_r0 = ɵɵnextContext(4);
-    ɵɵproperty("ngClass", ɵɵpureFunction1(3, _c5, !ctx_r0.control.value));
     ɵɵadvance();
     ɵɵproperty("name", "round-arrow-top-left")("color", "#03182b");
   }
@@ -322,7 +317,7 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
     });
     ɵɵelement(3, "fn-icon", 16);
     ɵɵelementEnd();
-    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 5, "span", 17);
+    ɵɵtemplate(4, FNInput_Conditional_0_Case_4_Conditional_9_Conditional_4_Template, 2, 2, "span", 12);
   }
   if (rf & 2) {
     const ctx_r0 = ɵɵnextContext(3);
@@ -336,15 +331,15 @@ function FNInput_Conditional_0_Case_4_Conditional_9_Template(rf, ctx) {
 }
 function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
-    ɵɵelementStart(0, "div", 13)(1, "div", 19)(2, "span", 20);
+    ɵɵelementStart(0, "div", 13)(1, "div", 17)(2, "span", 18);
     ɵɵtext(3);
     ɵɵpipe(4, "translate");
     ɵɵelementEnd();
-    ɵɵelementStart(5, "div", 21);
+    ɵɵelementStart(5, "div", 19);
     ɵɵelement(6, "fn-icon", 8);
     ɵɵelementEnd()();
-    ɵɵelementStart(7, "div", 22);
-    ɵɵelement(8, "div", 23);
+    ɵɵelementStart(7, "div", 20);
+    ɵɵelement(8, "div", 21);
     ɵɵelementEnd()();
   }
   if (rf & 2) {
@@ -357,7 +352,7 @@ function FNInput_Conditional_0_Case_4_Conditional_10_Template(rf, ctx) {
     ɵɵproperty("name", ctx_r0.passwordStrengthPercent > 50 ? "check-circle" : "info-circle")("variant", "Line")("size", "extrasmall")("color", ctx_r0.passwordStrengthPercent <= 25 ? "#ef3e42" : ctx_r0.passwordStrengthPercent <= 75 ? "#ff9f00" : "#6cc24a");
     ɵɵadvance(2);
     ɵɵstyleProp("width", ctx_r0.passwordStrengthPercent, "%");
-    ɵɵproperty("ngClass", ɵɵpureFunction3(11, _c6, ctx_r0.passwordStrengthPercent <= 25, ctx_r0.passwordStrengthPercent > 25 && ctx_r0.passwordStrengthPercent <= 75, ctx_r0.passwordStrengthPercent > 75));
+    ɵɵproperty("ngClass", ɵɵpureFunction3(11, _c5, ctx_r0.passwordStrengthPercent <= 25, ctx_r0.passwordStrengthPercent > 25 && ctx_r0.passwordStrengthPercent <= 75, ctx_r0.passwordStrengthPercent > 75));
   }
 }
 function FNInput_Conditional_0_Case_4_Template(rf, ctx) {
@@ -454,7 +449,7 @@ function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
     const _r10 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 6);
     ɵɵtemplate(1, FNInput_Conditional_0_Case_5_Conditional_1_Template, 3, 2, "div", 7);
-    ɵɵelementStart(2, "input", 24);
+    ɵɵelementStart(2, "input", 22);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_5_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r10);
@@ -484,7 +479,7 @@ function FNInput_Conditional_0_Case_5_Template(rf, ctx) {
     ɵɵadvance();
     ɵɵconditional(1, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) || (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text) ? 1 : -1);
     ɵɵadvance();
-    ɵɵproperty("type", ctx_r0.field.type === "number" && ctx_r0.field.isCurrency ? "text" : "number")("name", ctx_r0.field.name)("id", ctx_r0.uniqueId)("required", ctx_r0.field.required || false)("placeholder", ɵɵpipeBind1(3, 14, ctx_r0.field.placeholder || ""))("disabled", ctx_r0.isDisabled || false)("readOnly", ctx_r0.field.readOnly || false)("formControl", ctx_r0.control)("min", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? 0 : null)("max", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? ctx_r0.field.max : null)("step", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? ctx_r0.field.step || 1 : null)("ngClass", ɵɵpureFunction8(16, _c7, ctx_r0.control.disabled || ctx_r0.field.readOnly, ctx_r0.control.touched && ctx_r0.control.errors, ctx_r0.field["hasSuccessBorder"] && ctx_r0.control.valid && !ctx_r0.control.errors, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) && !(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), !!(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon) && !(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), !!(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), ctx_r0.field.isCurrency))("ngStyle", ɵɵpureFunction2(25, _c2, ctx_r0.field.valueColor || "inherit", ctx_r0.field.valueSize || ""));
+    ɵɵproperty("type", ctx_r0.field.type === "number" && ctx_r0.field.isCurrency ? "text" : "number")("name", ctx_r0.field.name)("id", ctx_r0.uniqueId)("required", ctx_r0.field.required || false)("placeholder", ɵɵpipeBind1(3, 14, ctx_r0.field.placeholder || ""))("disabled", ctx_r0.isDisabled || false)("readOnly", ctx_r0.field.readOnly || false)("formControl", ctx_r0.control)("min", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? 0 : null)("max", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? ctx_r0.field.max : null)("step", ctx_r0.field.type === "number" && !ctx_r0.field.isCurrency ? ctx_r0.field.step || 1 : null)("ngClass", ɵɵpureFunction8(16, _c6, ctx_r0.control.disabled || ctx_r0.field.readOnly, ctx_r0.control.touched && ctx_r0.control.errors, ctx_r0.field["hasSuccessBorder"] && ctx_r0.control.valid && !ctx_r0.control.errors, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) && !(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), !!(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon) && !(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), !!(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), ctx_r0.field.isCurrency))("ngStyle", ɵɵpureFunction2(25, _c2, ctx_r0.field.valueColor || "inherit", ctx_r0.field.valueSize || ""));
   }
 }
 function FNInput_Conditional_0_Case_6_Conditional_1_Conditional_1_Template(rf, ctx) {
@@ -629,9 +624,9 @@ function FNInput_Conditional_0_Case_6_Conditional_6_Template(rf, ctx) {
 function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "div", 25);
+    ɵɵelementStart(0, "div", 23);
     ɵɵtemplate(1, FNInput_Conditional_0_Case_6_Conditional_1_Template, 3, 2, "div", 7);
-    ɵɵelementStart(2, "input", 26);
+    ɵɵelementStart(2, "input", 24);
     ɵɵpipe(3, "translate");
     ɵɵlistener("input", function FNInput_Conditional_0_Case_6_Template_input_input_2_listener($event) {
       ɵɵrestoreView(_r12);
@@ -656,7 +651,7 @@ function FNInput_Conditional_0_Case_6_Template(rf, ctx) {
     ɵɵadvance();
     ɵɵconditional(1, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) || (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text) ? 1 : -1);
     ɵɵadvance();
-    ɵɵproperty("type", ctx_r0.field.type)("name", ctx_r0.field.name)("id", ctx_r0.uniqueId)("required", ctx_r0.field.required || false)("placeholder", ɵɵpipeBind1(3, 13, ctx_r0.field.placeholder || ""))("disabled", ctx_r0.field.disabled || false)("readOnly", ctx_r0.field.readOnly || false)("formControl", ctx_r0.control)("ngClass", ɵɵpureFunctionV(15, _c8, [ctx_r0.control.disabled || ctx_r0.field.readOnly, ctx_r0.control.touched && ctx_r0.control.errors, ctx_r0.field["hasSuccessBorder"] && ctx_r0.control.valid && !ctx_r0.control.errors, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) && !(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), !!(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), (ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)) && !ctx_r0.field.isCopyText && !(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), !!(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), ctx_r0.field.isCopyText && !ctx_r0.field.hasGenerateKey && !(ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)), ctx_r0.field.isCopyText && ctx_r0.field.hasGenerateKey && !(ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)), ctx_r0.field.isCopyText && ctx_r0.field.hasGenerateKey && (ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon))]))("ngStyle", ɵɵpureFunction2(26, _c2, ctx_r0.field.valueColor || "inherit", ctx_r0.field.valueSize || ""));
+    ɵɵproperty("type", ctx_r0.field.type)("name", ctx_r0.field.name)("id", ctx_r0.uniqueId)("required", ctx_r0.field.required || false)("placeholder", ɵɵpipeBind1(3, 13, ctx_r0.field.placeholder || ""))("disabled", ctx_r0.field.disabled || false)("readOnly", ctx_r0.field.readOnly || false)("formControl", ctx_r0.control)("ngClass", ɵɵpureFunctionV(15, _c7, [ctx_r0.control.disabled || ctx_r0.field.readOnly, ctx_r0.control.touched && ctx_r0.control.errors, ctx_r0.field["hasSuccessBorder"] && ctx_r0.control.valid && !ctx_r0.control.errors, (ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.icon) && !(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), !!(ctx_r0.field.prefix == null ? null : ctx_r0.field.prefix.text), (ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)) && !ctx_r0.field.isCopyText && !(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), !!(ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.text), ctx_r0.field.isCopyText && !ctx_r0.field.hasGenerateKey && !(ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)), ctx_r0.field.isCopyText && ctx_r0.field.hasGenerateKey && !(ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon)), ctx_r0.field.isCopyText && ctx_r0.field.hasGenerateKey && (ctx_r0.field.icon || (ctx_r0.field.suffix == null ? null : ctx_r0.field.suffix.icon))]))("ngStyle", ɵɵpureFunction2(26, _c2, ctx_r0.field.valueColor || "inherit", ctx_r0.field.valueSize || ""));
     ɵɵadvance(3);
     ɵɵconditional(5, ctx_r0.field.isCopyText ? 5 : -1);
     ɵɵadvance();
@@ -1614,7 +1609,7 @@ var FNInput = class _FNInput {
     features: [ɵɵStandaloneFeature],
     decls: 1,
     vars: 1,
-    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "class", "variant", "statusLabel"], [3, "field", "control", "hasFocus"], [3, "for", "label", "required", "hideOptional", "variant", "statusLabel"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "cursor-pointer", 3, "ngClass"], [1, "cursor-pointer", 3, "click", "keydown", "ngClass"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"]],
+    consts: [["fnTextarea", ""], [1, "fn-input-container"], [3, "for", "label", "required", "hideOptional", "class", "variant", "statusLabel"], [3, "field", "control", "hasFocus"], [3, "for", "label", "required", "hideOptional", "variant", "statusLabel"], [1, "fn-input-field", 2, "resize", "none", 3, "input", "blur", "focus", "name", "id", "required", "placeholder", "disabled", "rows", "readonly", "formControl", "ngClass", "ngStyle"], [1, "relative", "w-full"], [1, "absolute", "left-0", "top-1/2", "-translate-y-1/2", "pl-3", "flex", "items-center", "gap-2", 2, "z-index", "1"], [3, "name", "variant", "size", "color"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "ngStyle", "cursor-pointer"], [1, "fn-input-field", "overflow-hidden", "text-ellipsis", 3, "input", "focus", "blur", "type", "id", "required", "disabled", "formControl", "placeholder", "readonly", "ngClass", "ngStyle"], [1, "absolute", "right-0", "top-1/2", "-translate-y-1/2", "flex", "items-center", "pr-3", "gap-2"], [1, "cursor-pointer"], [1, "mt-2", "space-y-1"], [1, "text-sm", "font-medium", "whitespace-nowrap", 3, "click", "keydown.enter", "ngStyle"], [1, "cursor-pointer", 3, "click", "keydown"], [3, "name", "color"], [1, "flex", "items-center", "justify-between", "text-xs"], [1, "font-medium", 3, "ngClass"], [1, "flex", "items-center", "gap-1"], [1, "h-1.5", "w-full", "bg-[#eef0f2]", "rounded-full", "overflow-hidden"], [1, "h-full", "transition-all", "duration-300", "rounded-full", 3, "ngClass"], [1, "fn-input-field", 3, "input", "paste", "blur", "keydown", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "min", "max", "step", "ngClass", "ngStyle"], [1, "relative", "z-0"], [1, "fn-input-field", 3, "input", "blur", "focus", "type", "name", "id", "required", "placeholder", "disabled", "readOnly", "formControl", "ngClass", "ngStyle"]],
     template: function FNInput_Template(rf, ctx) {
       if (rf & 1) {
         ɵɵtemplate(0, FNInput_Conditional_0_Template, 9, 3);
@@ -1799,7 +1794,6 @@ var FNInput = class _FNInput {
                     class="cursor-pointer"\r
                     (click)="field.onGenerateKey && field.onGenerateKey()"\r
                     (keydown)="field.onGenerateKey && field.onGenerateKey()"\r
-                    [ngClass]="{ 'opacity-50 cursor-not-allowed': !control.value }"\r
                   >\r
                     <fn-icon [name]="'round-arrow-top-left'" [color]="'#03182b'"></fn-icon>\r
                   </span>\r
